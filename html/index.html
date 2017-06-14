@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Title of the document</title>
+<script type="text/javascript">
+	function setHeadPicture() {
+		var setDropDown = document.getElementById("headSet")
+		var colorDropDown = document.getElementById("headColor")
+		var headImg = document.getElementById("headImg");
+
+		var set = setDropDown.options[setDropDown.selectedIndex].value;
+		var color = colorDropDown.options[colorDropDown.selectedIndex].value;
+
+		headImg.src = "../output/" + set + "/" + color + "-head.png";
+	}
+	function setBodyPicture() {
+		var setDropDown = document.getElementById("bodySet")
+		var colorDropDown = document.getElementById("bodyColor")
+		var bodyImg = document.getElementById("bodyImg");
+
+		var set = setDropDown.options[setDropDown.selectedIndex].value;
+		var color = colorDropDown.options[colorDropDown.selectedIndex].value;
+
+		bodyImg.src = "../output/" + set + "/" + color + "-body.png";
+	}
+	function setLegsPicture() {
+		var setDropDown = document.getElementById("legsSet")
+		var colorDropDown = document.getElementById("legsColor")
+		var legsImg = document.getElementById("legsImg");
+
+		var set = setDropDown.options[setDropDown.selectedIndex].value;
+		var color = colorDropDown.options[colorDropDown.selectedIndex].value;
+
+		legsImg.src = "../output/" + set + "/" + color + "-legs.png";
+	}
+</script>
+</head>
+
+<body>
+<div id="head">
+	<img id="headImg" src="../output/hylian/black-head.png" />
+	<select id="headSet" onchange="setHeadPicture();">
+	    <option value="hylian">Hylian</option>
+		<option value="gerudo">Gerudo</option>
+		<option value="snoquill">Snoquill</option>
+		<option value="soldier">Soldier</option>
+		<option value="well-worn">Well Worn</option>
+	</select>
+	<select id="headColor" onchange="setHeadPicture();">
+	    <option value="black">Black</option>
+		<option value="blue">Blue</option>
+		<option value="brown">Brown</option>
+		<option value="crimson">Crimson</option>
+		<option value="gray">Gray</option>
+		<option value="green">Green</option>
+		<option value="light-blue">Light Blue</option>
+		<option value="light-yellow">Light Yellow</option>
+		<option value="navy">Navy</option>
+		<option value="orange">Orange</option>
+		<option value="peach">Peach</option>
+		<option value="purple">Purple</option>
+		<option value="red">Red</option>
+		<option value="white">White</option>
+		<option value="yellow">Yellow</option>
+	</select>
+</div>
+<div id="body">
+	<img id="bodyImg" src="../output/hylian/black-body.png" />
+	<select id="bodySet" onchange="setBodyPicture();">
+	    <option value="hylian">Hylian</option>
+		<option value="gerudo">Gerudo</option>
+		<option value="snoquill">Snoquill</option>
+		<option value="soldier">Soldier</option>
+		<option value="well-worn">Well Worn</option>
+	</select>
+	<select id="bodyColor" onchange="setBodyPicture();">
+	    <option value="black">Black</option>
+		<option value="blue">Blue</option>
+		<option value="brown">Brown</option>
+		<option value="crimson">Crimson</option>
+		<option value="gray">Gray</option>
+		<option value="green">Green</option>
+		<option value="light-blue">Light Blue</option>
+		<option value="light-yellow">Light Yellow</option>
+		<option value="navy">Navy</option>
+		<option value="orange">Orange</option>
+		<option value="peach">Peach</option>
+		<option value="purple">Purple</option>
+		<option value="red">Red</option>
+		<option value="white">White</option>
+		<option value="yellow">Yellow</option>
+	</select>
+</div>
+<div id="legs">
+	<img id="legsImg" src="../output/hylian/black-legs.png" />
+	<select id="legsSet" onchange="setLegsPicture();">
+	    <option value="hylian">Hylian</option>
+		<option value="gerudo">Gerudo</option>
+		<option value="snoquill">Snoquill</option>
+		<option value="soldier">Soldier</option>
+		<option value="well-worn">Well Worn</option>
+	</select>
+	<select id="legsColor" onchange="setLegsPicture();">
+	    <option value="black">Black</option>
+		<option value="blue">Blue</option>
+		<option value="brown">Brown</option>
+		<option value="crimson">Crimson</option>
+		<option value="gray">Gray</option>
+		<option value="green">Green</option>
+		<option value="light-blue">Light Blue</option>
+		<option value="light-yellow">Light Yellow</option>
+		<option value="navy">Navy</option>
+		<option value="orange">Orange</option>
+		<option value="peach">Peach</option>
+		<option value="purple">Purple</option>
+		<option value="red">Red</option>
+		<option value="white">White</option>
+		<option value="yellow">Yellow</option>
+	</select>
+</div>
+</body>
+
+</html>
