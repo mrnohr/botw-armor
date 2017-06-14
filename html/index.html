@@ -6,15 +6,15 @@
 <script type="text/javascript">
 	function setHeadPicture(set, color) {
 		var headImg = document.getElementById("headImg");
-		headImg.src = "../output/" + set + "/" + color + "-head.png";
+		headImg.src = "images/" + set + "/" + color + "-head.png";
 	}
 	function setBodyPicture(set, color) {
 		var bodyImg = document.getElementById("bodyImg");
-		bodyImg.src = "../output/" + set + "/" + color + "-body.png";
+		bodyImg.src = "images/" + set + "/" + color + "-body.png";
 	}
 	function setLegsPicture(set, color) {
 		var legsImg = document.getElementById("legsImg");
-		legsImg.src = "../output/" + set + "/" + color + "-legs.png";
+		legsImg.src = "images/" + set + "/" + color + "-legs.png";
 	}
 
 	function headChanged() {
@@ -90,7 +90,7 @@
 
 <body>
 <div id="head">
-	<img id="headImg" src="../output/hylian/blue-head.png" />
+	<img id="headImg" src="images/hylian/blue-head.png" />
 	<select id="headSet" onchange="headChanged();">
 	    <option value="hylian">Hylian</option>
 		<option value="gerudo">Gerudo</option>
@@ -117,7 +117,7 @@
 	</select>
 </div>
 <div id="body">
-	<img id="bodyImg" src="../output/hylian/blue-body.png" />
+	<img id="bodyImg" src="images/hylian/blue-body.png" />
 	<select id="bodySet" onchange="bodyChanged();">
 	    <option value="hylian">Hylian</option>
 		<option value="gerudo">Gerudo</option>
@@ -144,7 +144,7 @@
 	</select>
 </div>
 <div id="legs">
-	<img id="legsImg" src="../output/hylian/blue-legs.png" />
+	<img id="legsImg" src="images/hylian/blue-legs.png" />
 	<select id="legsSet" onchange="legsChanged();">
 	    <option value="hylian">Hylian</option>
 		<option value="gerudo">Gerudo</option>
