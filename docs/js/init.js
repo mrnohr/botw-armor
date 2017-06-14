@@ -2,12 +2,12 @@ function init() {
 	fillColorDropdown("headColor");
 	fillColorDropdown("bodyColor");
 	fillColorDropdown("legsColor");
-	//fillColorDropdown("allColor");
+	fillColorDropdown("allColor");
 
 	fillArmorDropdown("headSet");
 	fillArmorDropdown("bodySet");
 	fillArmorDropdown("legsSet");
-	//fillArmorDropdown("allSet");
+	fillArmorDropdown("allSet");
 }
 
 function fillColorDropdown(elementName) {
