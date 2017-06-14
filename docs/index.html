@@ -52,10 +52,18 @@
     </nav>
 
     <div class="container">
-		<h1>Breath of the Wild - Armor Picker</h1>
+		<div class="page-header">
+			<h1>Breath of the Wild Fashion</h1>
+		</div>
+		<p class="lead">
+			See what your armor will look like without visiting the
+			<a href="http://zelda.wikia.com/wiki/Kochi_Dye_Shop" target="_blank">dye shop</a>.
+		</p>
+
 		<div class="row space-row">
 			<div class="col-md-4"><img id="headImg" src="images/hylian/blue-head.png" /></div>
 			<div class="col-md-8">
+				<h2>Head</h2>
 				<div class="row">
 					<div class="col-md-6">
 						<select id="headSet" onchange="headChanged();" class="form-control"></select>
@@ -79,6 +87,7 @@
 		<div class="row space-row">
 			<div class="col-md-4"><img id="bodyImg" src="images/hylian/blue-body.png" /></div>
 			<div class="col-md-8">
+				<h2>Body</h2>
 				<div class="row">
 					<div class="col-md-6">
 						<select id="bodySet" onchange="bodyChanged();" class="form-control"></select>
@@ -102,6 +111,7 @@
 		<div class="row space-row">
 			<div class="col-md-4"><img id="legsImg" src="images/hylian/blue-legs.png" /></div>
 			<div class="col-md-8">
+				<h2>Legs</h2>
 				<div class="row">
 					<div class="col-md-6">
 						<select id="legsSet" onchange="legsChanged();" class="form-control"></select>
@@ -120,12 +130,13 @@
 						<button onclick="legsColorNext()" class="btn btn-default">Next</button>
 					</div>
 				</div>
-			</div>
-		</div>
-		<div class="row">
-			<div class="col-md-4">
-				<select id="allSet" onchange="allSetChanged();" class="form-control"></select>
-				<select id="allColor" onchange="allColorChanged();" class="form-control"></select>
+				<h2>Whole Set</h2>
+				<div class="row">
+					<div class="col-md-6">
+						<select id="allSet" onchange="allSetChanged();" class="form-control"></select>
+						<select id="allColor" onchange="allColorChanged();" class="form-control"></select>
+					</div>
+				</div>
 			</div>
 		</div>
     </div><!-- /.container -->
