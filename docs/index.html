@@ -1,202 +1,59 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTF-8">
-<title>BOTW Armor</title>
-<script type="text/javascript">
-	function setHeadPicture(set, color) {
-		var headImg = document.getElementById("headImg");
-		headImg.src = "images/" + set + "/" + color + "-head.png";
-	}
-	function setBodyPicture(set, color) {
-		var bodyImg = document.getElementById("bodyImg");
-		bodyImg.src = "images/" + set + "/" + color + "-body.png";
-	}
-	function setLegsPicture(set, color) {
-		var legsImg = document.getElementById("legsImg");
-		legsImg.src = "images/" + set + "/" + color + "-legs.png";
-	}
-
-	function headChanged() {
-		var setDropDown = document.getElementById("headSet")
-		var colorDropDown = document.getElementById("headColor")
-
-		var set = setDropDown.options[setDropDown.selectedIndex].value;
-		var color = colorDropDown.options[colorDropDown.selectedIndex].value;
-
-		setHeadPicture(set, color);
-	}
-	function bodyChanged() {
-		var setDropDown = document.getElementById("bodySet")
-		var colorDropDown = document.getElementById("bodyColor")
-
-		var set = setDropDown.options[setDropDown.selectedIndex].value;
-		var color = colorDropDown.options[colorDropDown.selectedIndex].value;
-
-		setBodyPicture(set, color);
-	}
-
-	function legsChanged() {
-		var setDropDown = document.getElementById("legsSet")
-		var colorDropDown = document.getElementById("legsColor")
-
-		var set = setDropDown.options[setDropDown.selectedIndex].value;
-		var color = colorDropDown.options[colorDropDown.selectedIndex].value;
-
-		setLegsPicture(set, color);
-	}
-
-	function allColorChanged() {
-		var colorDropDown = document.getElementById("allColor")
-		var color = colorDropDown.options[colorDropDown.selectedIndex].value;
-
-		var headSetDropDown = document.getElementById("headSet")
-		var headSet = headSetDropDown.options[headSetDropDown.selectedIndex].value;
-		setHeadPicture(headSet, color);
-		document.getElementById("headColor").value = color;
-
-		var bodySetDropDown = document.getElementById("bodySet")
-		var bodySet = bodySetDropDown.options[bodySetDropDown.selectedIndex].value;
-		setBodyPicture(bodySet, color);
-		document.getElementById("bodyColor").value = color;
-
-		var legsSetDropDown = document.getElementById("legsSet")
-		var legsSet = legsSetDropDown.options[legsSetDropDown.selectedIndex].value;
-		setLegsPicture(legsSet, color);
-		document.getElementById("legsColor").value = color;
-	}
-
-	function allSetChanged() {
-		var setDropDown = document.getElementById("allSet")
-		var set = setDropDown.options[setDropDown.selectedIndex].value;
-
-		var headColorDropDown = document.getElementById("headColor")
-		var headColor = headColorDropDown.options[headColorDropDown.selectedIndex].value;
-		setHeadPicture(set, headColor);
-		document.getElementById("headSet").value = set;
-
-		var bodyColorDropDown = document.getElementById("bodyColor")
-		var bodyColor = bodyColorDropDown.options[bodyColorDropDown.selectedIndex].value;
-		setBodyPicture(set, bodyColor);
-		document.getElementById("bodySet").value = set;
-
-		var legsColorDropDown = document.getElementById("legsColor")
-		var legsColor = legsColorDropDown.options[legsColorDropDown.selectedIndex].value;
-		setLegsPicture(set, legsColor);
-		document.getElementById("legsSet").value = set;
-	}
-</script>
+	<meta charset="UTF-8">
+	<title>BOTW Armor</title>
+	<script src="javascript/init.js"></script>
+	<script src="javascript/colorChange.js"></script>
 </head>
 
 <body>
 <div id="head">
 	<img id="headImg" src="images/hylian/blue-head.png" />
-	<select id="headSet" onchange="headChanged();">
-	    <option value="hylian">Hylian</option>
-		<option value="gerudo">Gerudo</option>
-		<option value="snoquill">Snoquill</option>
-		<option value="soldier">Soldier</option>
-		<option value="well-worn">Well Worn</option>
-	</select>
-	<select id="headColor" onchange="headChanged();">
-		<option value="blue">Blue</option>
-		<option value="red">Red</option>
-		<option value="yellow">Yellow</option>
-		<option value="white">White</option>
-	    <option value="black">Black</option>
-		<option value="purple">Purple</option>
-		<option value="green">Green</option>
-		<option value="light-blue">Light Blue</option>
-		<option value="navy">Navy</option>
-		<option value="orange">Orange</option>
-		<option value="peach">Peach</option>
-		<option value="crimson">Crimson</option>
-		<option value="light-yellow">Light Yellow</option>
-		<option value="brown">Brown</option>
-		<option value="gray">Gray</option>
-	</select>
+
+	Set
+	<select id="headSet" onchange="headChanged();"></select>
+	<button onclick="headSetBack()">Back</button>
+	<button onclick="headSetNext()">Next</button>
+
+	Color
+	<select id="headColor" onchange="headChanged();"></select>
+	<button onclick="headColorBack()">Back</button>
+	<button onclick="headColorNext()">Next</button>
 </div>
 <div id="body">
 	<img id="bodyImg" src="images/hylian/blue-body.png" />
-	<select id="bodySet" onchange="bodyChanged();">
-	    <option value="hylian">Hylian</option>
-		<option value="gerudo">Gerudo</option>
-		<option value="snoquill">Snoquill</option>
-		<option value="soldier">Soldier</option>
-		<option value="well-worn">Well Worn</option>
-	</select>
-	<select id="bodyColor" onchange="bodyChanged();">
-		<option value="blue">Blue</option>
-		<option value="red">Red</option>
-		<option value="yellow">Yellow</option>
-		<option value="white">White</option>
-	    <option value="black">Black</option>
-		<option value="purple">Purple</option>
-		<option value="green">Green</option>
-		<option value="light-blue">Light Blue</option>
-		<option value="navy">Navy</option>
-		<option value="orange">Orange</option>
-		<option value="peach">Peach</option>
-		<option value="crimson">Crimson</option>
-		<option value="light-yellow">Light Yellow</option>
-		<option value="brown">Brown</option>
-		<option value="gray">Gray</option>
-	</select>
+	Set
+	<select id="bodySet" onchange="bodyChanged();"></select>
+	<button onclick="bodySetBack()">Back</button>
+	<button onclick="bodySetNext()">Next</button>
+
+	Color
+	<select id="bodyColor" onchange="bodyChanged();"></select>
+	<button onclick="bodyColorBack()">Back</button>
+	<button onclick="bodyColorNext()">Next</button>
 </div>
 <div id="legs">
 	<img id="legsImg" src="images/hylian/blue-legs.png" />
-	<select id="legsSet" onchange="legsChanged();">
-	    <option value="hylian">Hylian</option>
-		<option value="gerudo">Gerudo</option>
-		<option value="snoquill">Snoquill</option>
-		<option value="soldier">Soldier</option>
-		<option value="well-worn">Well Worn</option>
-	</select>
-	<select id="legsColor" onchange="legsChanged();">
-		<option value="blue">Blue</option>
-		<option value="red">Red</option>
-		<option value="yellow">Yellow</option>
-		<option value="white">White</option>
-	    <option value="black">Black</option>
-		<option value="purple">Purple</option>
-		<option value="green">Green</option>
-		<option value="light-blue">Light Blue</option>
-		<option value="navy">Navy</option>
-		<option value="orange">Orange</option>
-		<option value="peach">Peach</option>
-		<option value="crimson">Crimson</option>
-		<option value="light-yellow">Light Yellow</option>
-		<option value="brown">Brown</option>
-		<option value="gray">Gray</option>
-	</select>
+
+	Set
+	<select id="legsSet" onchange="legsChanged();"></select>
+	<button onclick="legsSetBack()">Back</button>
+	<button onclick="legsSetNext()">Next</button>
+
+	Color
+	<select id="legsColor" onchange="legsChanged();"></select>
+	<button onclick="legsColorBack()">Back</button>
+	<button onclick="legsColorNext()">Next</button>
 </div>
 <div id="changers">
 	<p>Change Everything</p>
-	<select id="allSet" onchange="allSetChanged();">
-	    <option value="hylian">Hylian</option>
-		<option value="gerudo">Gerudo</option>
-		<option value="snoquill">Snoquill</option>
-		<option value="soldier">Soldier</option>
-		<option value="well-worn">Well Worn</option>
-	</select>
-	<select id="allColor" onchange="allColorChanged();">
-		<option value="blue">Blue</option>
-		<option value="red">Red</option>
-		<option value="yellow">Yellow</option>
-		<option value="white">White</option>
-	    <option value="black">Black</option>
-		<option value="purple">Purple</option>
-		<option value="green">Green</option>
-		<option value="light-blue">Light Blue</option>
-		<option value="navy">Navy</option>
-		<option value="orange">Orange</option>
-		<option value="peach">Peach</option>
-		<option value="crimson">Crimson</option>
-		<option value="light-yellow">Light Yellow</option>
-		<option value="brown">Brown</option>
-		<option value="gray">Gray</option>
-	</select>
+	<select id="allSet" onchange="allSetChanged();"></select>
+	<select id="allColor" onchange="allColorChanged();"></select>
 </div>
+<script>
+	init();
+</script>
 </body>
 
 </html>
