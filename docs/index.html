@@ -27,33 +27,34 @@
 	<!-- Custom Scripts -->
 	<script src="js/init.js"></script>
 	<script src="js/colorChange.js"></script>
-  </head>
+	</head>
 
-  <body>
+	<body>
 
 	<nav class="navbar navbar-default navbar-fixed-top">
-	  <div class="container">
-		<div class="navbar-header">
-		  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-			<span class="sr-only">Toggle navigation</span>
-			<span class="icon-bar"></span>
-			<span class="icon-bar"></span>
-			<span class="icon-bar"></span>
-		  </button>
-		  <span class="navbar-brand">
-			  <img src="img/logo-navbar.jpg" />
-		  </span>
-		  <span class="navbar-brand">
-			  Breath of the Wild Fashion
-		  </span>
+		<div class="container">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<span class="navbar-brand">
+					<img src="img/logo-navbar.jpg" />
+				</span>
+				<span class="navbar-brand">
+					Breath of the Wild Fashion
+				</span>
+			</div>
+			<div id="navbar" class="collapse navbar-collapse navbar-right">
+				<a href="#donate" class="btn btn-success navbar-btn">Buy Me a Beer</a>
+			</div><!--/.nav-collapse -->
 		</div>
-		<div id="navbar" class="collapse navbar-collapse navbar-right">
-		  <a href="#donate" class="btn btn-success navbar-btn">Buy Me a Beer</a>
-		</div><!--/.nav-collapse -->
-	  </div>
 	</nav>
 
 	<div class="container">
+		<!-- Intro text -->
 		<div class="page-header">
 			<h1>Breath of the Wild Fashion</h1>
 		</div>
@@ -62,111 +63,134 @@
 			<a href="http://zelda.wikia.com/wiki/Kochi_Dye_Shop" target="_blank">dye shop</a>.
 		</p>
 
-		<div class="row space-row">
+		<!-- Head -->
+		<div class="row row-space">
+			<div class="col-md-1 text-right">
+				<div class="row">
+					<button onclick="headSetBack()" class="btn btn-default">
+						<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+					</button>
+				</div>
+				<div class="row">
+					<button onclick="headColorBack()" class="btn btn-default">
+						<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+					</button>
+				</div>
+			</div>
 			<div class="col-md-4">
 				<img id="headImg" src="images/hylian/blue-head.png" class="img-responsive"/>
 			</div>
-			<div class="col-md-8">
-				<h2>Head</h2>
+			<div class="col-md-1">
 				<div class="row">
-					<div class="col-md-6">
-						<select id="headSet" onchange="headChanged();" class="form-control"></select>
-					</div>
-					<div class="col-md-6">
-						<button onclick="headSetBack()" class="btn btn-default">
-							<span class="glyphicon glyphicon-arrow-left" aria-hidden="true"></span>
-						</button>
-						<button onclick="headSetNext()" class="btn btn-default">
-							<span class="glyphicon glyphicon-arrow-right" aria-hidden="true"></span>
-						</button>
-					</div>
+					<button onclick="headSetNext()" class="btn btn-default">
+						<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+					</button>
 				</div>
 				<div class="row">
-					<div class="col-md-6">
-						<select id="headColor" onchange="headChanged();" class="form-control"></select>
-					</div>
-					<div class="col-md-6">
-						<button onclick="headColorBack()" class="btn btn-default">
-							<span class="glyphicon glyphicon-arrow-left" aria-hidden="true"></span>
-						</button>
-						<button onclick="headColorNext()" class="btn btn-default">
-							<span class="glyphicon glyphicon-arrow-right" aria-hidden="true"></span>
-						</button>
-					</div>
+					<button onclick="headColorNext()" class="btn btn-default">
+						<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+					</button>
+				</div>
+			</div>
+			<div class="col-md-2">
+				<div class="row">
+					<select id="headSet" onchange="headChanged();" class="form-control"></select>
+				</div>
+				<div class="row">
+					<select id="headColor" onchange="headChanged();" class="form-control"></select>
 				</div>
 			</div>
 		</div>
-		<div class="row space-row">
-			<div class="col-md-4"><img id="bodyImg" src="images/hylian/blue-body.png" class="img-responsive"/></div>
-			<div class="col-md-8">
-				<h2>Body</h2>
+
+		<!-- Body -->
+		<div class="row row-space">
+			<div class="col-md-1 text-right">
 				<div class="row">
-					<div class="col-md-6">
-						<select id="bodySet" onchange="bodyChanged();" class="form-control"></select>
-					</div>
-					<div class="col-md-6">
-						<button onclick="bodySetBack()" class="btn btn-default">
-							<span class="glyphicon glyphicon-arrow-left" aria-hidden="true"></span>
-						</button>
-						<button onclick="bodySetNext()" class="btn btn-default">
-							<span class="glyphicon glyphicon-arrow-right" aria-hidden="true"></span>
-						</button>
-					</div>
+					<button onclick="bodySetBack()" class="btn btn-default">
+						<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+					</button>
 				</div>
 				<div class="row">
-					<div class="col-md-6">
-						<select id="bodyColor" onchange="bodyChanged();" class="form-control"></select>
-					</div>
-					<div class="col-md-6">
-						<button onclick="bodyColorBack()" class="btn btn-default">
-							<span class="glyphicon glyphicon-arrow-left" aria-hidden="true"></span>
-						</button>
-						<button onclick="bodyColorNext()" class="btn btn-default">
-							<span class="glyphicon glyphicon-arrow-right" aria-hidden="true"></span>
-						</button>
-					</div>
+					<button onclick="bodyColorBack()" class="btn btn-default">
+						<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+					</button>
+				</div>
+			</div>
+			<div class="col-md-4">
+				<img id="bodyImg" src="images/hylian/blue-body.png" class="img-responsive"/>
+			</div>
+			<div class="col-md-1">
+				<div class="row">
+					<button onclick="bodySetNext()" class="btn btn-default">
+						<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+					</button>
+				</div>
+				<div class="row">
+					<button onclick="bodyColorNext()" class="btn btn-default">
+						<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+					</button>
+				</div>
+			</div>
+			<div class="col-md-2">
+				<div class="row">
+					<select id="bodySet" onchange="bodyChanged();" class="form-control"></select>
+				</div>
+				<div class="row">
+					<select id="bodyColor" onchange="bodyChanged();" class="form-control"></select>
 				</div>
 			</div>
 		</div>
-		<div class="row space-row">
-			<div class="col-md-4"><img id="legsImg" src="images/hylian/blue-legs.png" class="img-responsive"/></div>
-			<div class="col-md-8">
-				<h2>Legs</h2>
+
+		<!-- Legs -->
+		<div class="row row-space">
+			<div class="col-md-1 text-right">
 				<div class="row">
-					<div class="col-md-6">
-						<select id="legsSet" onchange="legsChanged();" class="form-control"></select>
-					</div>
-					<div class="col-md-6">
-						<button onclick="legsSetBack()" class="btn btn-default">
-							<span class="glyphicon glyphicon-arrow-left" aria-hidden="true"></span>
-						</button>
-						<button onclick="legsSetNext()" class="btn btn-default">
-							<span class="glyphicon glyphicon-arrow-right" aria-hidden="true"></span>
-						</button>
-					</div>
+					<button onclick="legsSetBack()" class="btn btn-default">
+						<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+					</button>
 				</div>
 				<div class="row">
-					<div class="col-md-6">
-						<select id="legsColor" onchange="legsChanged();" class="form-control"></select>
-					</div>
-					<div class="col-md-6">
-						<button onclick="legsColorBack()" class="btn btn-default">
-							<span class="glyphicon glyphicon-arrow-left" aria-hidden="true"></span>
-						</button>
-						<button onclick="legsColorNext()" class="btn btn-default">
-							<span class="glyphicon glyphicon-arrow-right" aria-hidden="true"></span>
-						</button>
-					</div>
+					<button onclick="legsColorBack()" class="btn btn-default">
+						<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+					</button>
 				</div>
-				<h2>Whole Set</h2>
+			</div>
+			<div class="col-md-4">
+				<img id="legsImg" src="images/hylian/blue-legs.png" class="img-responsive"/>
+			</div>
+			<div class="col-md-1">
 				<div class="row">
-					<div class="col-md-6">
-						<select id="allSet" onchange="allSetChanged();" class="form-control"></select>
-						<select id="allColor" onchange="allColorChanged();" class="form-control"></select>
-					</div>
+					<button onclick="legsSetNext()" class="btn btn-default">
+						<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+					</button>
+				</div>
+				<div class="row">
+					<button onclick="legsColorNext()" class="btn btn-default">
+						<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+					</button>
+				</div>
+			</div>
+			<div class="col-md-2">
+				<div class="row">
+					<select id="legsSet" onchange="legsChanged();" class="form-control"></select>
+				</div>
+				<div class="row">
+					<select id="legsColor" onchange="legsChanged();" class="form-control"></select>
 				</div>
 			</div>
 		</div>
+
+		<!-- Change all -->
+		<div class="row">
+			<div class="col-md-2">
+			</div>
+			<div class="col-md-2">
+				<p class="text-center">Change All</p>
+				<select id="allSet" onchange="allSetChanged();" class="form-control"></select>
+				<select id="allColor" onchange="allColorChanged();" class="form-control"></select>
+			</div>
+		</div>
+
 	</div><!-- /.container -->
 
 
