@@ -42,9 +42,19 @@ function fillColorDropdown(elementName) {
 function fillArmorDropdown(elementName) {
 	var armors = {
 		"hylian":"Hylian",
-		"gerudo":"Gerudo",
-		"snoquill":"Snoquill",
 		"soldier":"Soldier",
+		"snoquill":"Snoquill",
+		"desert-voe":"Desert Voe",
+		"gerudo":"Gerudo",
+		"rubber":"Rubber",
+		"flamebreaker":"Flamebreaker",
+		"zora":"Zora",
+		"stealth":"Stealth",
+		"climber":"Climber",
+		"barbarian":"Barbarian",
+		"radiant":"Radiant",
+		"ancient":"Ancient",
+		"wild":"Wild",
 		"well-worn":"Well Worn"
 	};
 
