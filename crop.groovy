@@ -1,11 +1,11 @@
 import scripts.*
 
-String setName = "well-worn"
+String setName = "wild"
 
 File sourceDir = new File("raw/${setName}")
 assert sourceDir.exists()
 
-File outputDir = new File("output/${setName}")
+File outputDir = new File("docs/images/${setName}")
 if(outputDir.exists()) {
 	println "Deleting output directory"
 	outputDir.delete()
