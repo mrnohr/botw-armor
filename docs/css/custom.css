@@ -5,11 +5,3 @@ body {
 .space-row {
 	padding-bottom: 2px;
 }
-
-.navbar-inverse {
-    background-color: #429bf4;
-    border-color: #E7E7E7;
-}
-.navbar-default .navbar-brand {
-    color: #000;
-}
