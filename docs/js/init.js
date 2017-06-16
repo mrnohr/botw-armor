@@ -29,7 +29,8 @@ function fillColorDropdown(elementName) {
 		"crimson":"Crimson",
 		"light-yellow":"Light Yellow",
 		"brown":"Brown",
-		"gray":"Gray"
+		"gray":"Gray",
+		"undyed":"Original"
 	};
 
 	var dropDown = document.getElementById(elementName);
