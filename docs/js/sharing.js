@@ -8,6 +8,18 @@ function checkForShare() {
 	setDropdownByKey("legsSet", getParameterByName("ls"));
 }
 
+function getLink() {
+	var link = "http://botw.fashion";
+	link += "?hc=" + getDropdownKey("headColor");
+	link += "&bc=" + getDropdownKey("bodyColor");
+	link += "&lc=" + getDropdownKey("legsColor");
+	link += "&hs=" + getDropdownKey("headSet");
+	link += "&bs=" + getDropdownKey("bodySet");
+	link += "&ls=" + getDropdownKey("legsSet");
+
+	console.log(link);
+}
+
 //https://stackoverflow.com/questions/901115/how-can-i-get-query-string-values-in-javascript
 function getParameterByName(name) {
     var url = window.location.href;
@@ -25,4 +37,8 @@ function setDropdownByKey(elementName, key) {
 		dropDown.value = key;
 		dropDown.onchange();
 	}
+}
+
+function getDropdownKey(elementName) {
+	return document.getElementById(elementName).value
 }
