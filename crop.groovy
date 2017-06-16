@@ -1,6 +1,6 @@
 import scripts.*
 
-String setName = "wild"
+String setName = "sand-boots"
 
 File sourceDir = new File("raw/${setName}")
 assert sourceDir.exists()

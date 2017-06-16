@@ -8,6 +8,8 @@ function init() {
 	fillArmorDropdown("bodySet");
 	fillArmorDropdown("legsSet");
 	fillArmorDropdown("allSet");
+
+	addBoots("legsSet");
 }
 
 function fillColorDropdown(elementName) {
@@ -66,4 +68,18 @@ function fillArmorDropdown(elementName) {
 		option.innerHTML = armors[key];
 		dropDown.appendChild(option);
 	}
+}
+
+function addBoots(elementName) {
+	var dropDown = document.getElementById(elementName);
+
+	var sand = document.createElement("option");
+	sand.value = "sand-boots";
+	sand.innerHTML = "Sand Boots"
+	dropDown.appendChild(sand);
+
+	var snow = document.createElement("option");
+	snow.value = "snow-boots";
+	snow.innerHTML = "Snow Boots"
+	dropDown.appendChild(snow);
 }
