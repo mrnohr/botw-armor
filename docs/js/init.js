@@ -9,7 +9,8 @@ function init() {
 	fillArmorDropdown("legsSet");
 	fillArmorDropdown("allSet");
 
-	addBoots("legsSet");
+	fillAdditionalBody("bodySet");
+	fillAdditionalLegs("legsSet");
 }
 
 function fillColorDropdown(elementName) {
@@ -71,7 +72,16 @@ function fillArmorDropdown(elementName) {
 	}
 }
 
-function addBoots(elementName) {
+function fillAdditionalBody(elementName) {
+	var dropDown = document.getElementById(elementName);
+
+	var sand = document.createElement("option");
+	sand.value = "champion";
+	sand.innerHTML = "Champion"
+	dropDown.appendChild(sand);
+}
+
+function fillAdditionalLegs(elementName) {
 	var dropDown = document.getElementById(elementName);
 
 	var sand = document.createElement("option");

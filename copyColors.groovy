@@ -1,6 +1,6 @@
-String bodyPart = "legs"
+String bodyPart = "body"
 
-File inputFile = new File("docs/images/unequipped/${bodyPart}.png")
+File inputFile = new File("docs/images/champion/${bodyPart}.png")
 
 
 assert inputFile.exists()
@@ -24,6 +24,6 @@ def colors = [
 ]
 
 colors.each {key, value ->
-	File outputFile = new File("docs/images/unequipped/${key}-${bodyPart}.png")
+	File outputFile = new File("docs/images/champion/${key}-${bodyPart}.png")
 	outputFile.bytes = inputFile.bytes
 }
