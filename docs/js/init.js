@@ -57,7 +57,8 @@ function fillArmorDropdown(elementName) {
 		"radiant":"Radiant",
 		"ancient":"Ancient",
 		"wild":"Wild",
-		"well-worn":"Well Worn"
+		"well-worn":"Well Worn",
+		"unequipped":"Unequipped"
 	};
 
 	var dropDown = document.getElementById(elementName);
