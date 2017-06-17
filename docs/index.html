@@ -220,6 +220,49 @@
 
 		<div class="row">&nbsp;</div>
 
+		<!-- Sharing -->
+		<div class="row">
+			<div class="col-xs-2 col-sm-1"> </div>
+			<div class="col-xs-8 col-sm-4">
+				<button class="btn btn-primary btn-block" onclick="fillShareLink();" data-toggle="modal" data-target="#myModal">
+					Share
+				</button>
+			</div>
+		</div>
+
+		<!-- Sharing link modal -->
+		<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+							<span aria-hidden="true">&times;</span>
+						</button>
+						<h4 class="modal-title" id="myModalLabel">Share Your Fashion</h4>
+					</div>
+					<div class="modal-body">
+						<p>Copy/Paste this link:</p>
+						<p>
+							<input type="text" id="shareLink" class="form-control" placeholder="Text input">
+						</p>
+						<p>
+							<a id="shareTweet" class="btn btn-info" href="https://twitter.com/intent/tweet?text=botw.fashion" target="_blank">
+								<i class="fa fa-twitter"></i> Tweet
+							</a>
+							<a id="shareFacebook" class="btn btn-primary" href="https://www.facebook.com/sharer/sharer.php?u=botw.fashion" target="_blank">
+								<i class="fa fa-facebook"></i> Facebook
+							</a>
+						</p>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="row">&nbsp;</div>
+
 		<!-- Note about small screen -->
 		<div class="panel panel-info visible-xs">
 			<div class="panel-heading">

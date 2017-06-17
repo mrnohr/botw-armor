@@ -103,6 +103,7 @@ function getLink2() {
 	var sharingKey = "http://botw.fashion?id=" + hsk + hck + bsk + bck + lsk + lck;
 
 	console.log(sharingKey);
+	return sharingKey;
 }
 
 function setColorsFromLink(id) {
@@ -115,4 +116,19 @@ function setColorsFromLink(id) {
 		setDropdownByKey("legsSet", sharingSet[parts[4]]);
 		setDropdownByKey("legsColor", sharingColors[parts[5]]);
 	}
+}
+
+function fillShareLink() {
+	var shareLink = getLink2();
+
+	var linkInput = document.getElementById("shareLink");
+	linkInput.value = shareLink;
+
+	var socialMessage = "This is my Zelda BOTW fashion! " + shareLink;
+
+	var twitterInput = document.getElementById("shareTweet");
+	twitterInput.setAttribute("href", "https://twitter.com/intent/tweet?text=" + encodeURI(socialMessage + " #zelda #botw"));
+
+	var facebookInput = document.getElementById("shareFacebook");
+	facebookInput.setAttribute("href", "https://www.facebook.com/sharer/sharer.php?u=" + shareLink);
 }
