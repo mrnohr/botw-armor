@@ -88,7 +88,10 @@ var sharingSet = {
 	d: "ancient",
 	e: "wild",
 	f: "well-worn",
-	g: "unequipped"
+	g: "unequipped",
+	h: "champion",
+	i: "sand-boots",
+	j: "snow-boots"
 }
 
 function getLink2() {
