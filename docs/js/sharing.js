@@ -130,7 +130,7 @@ function fillShareLink() {
 	var socialMessage = "This is my Zelda BOTW fashion! " + shareLink;
 
 	var twitterInput = document.getElementById("shareTweet");
-	twitterInput.setAttribute("href", "https://twitter.com/intent/tweet?text=" + encodeURI(socialMessage + " #zelda #botw"));
+	twitterInput.setAttribute("href", "https://twitter.com/intent/tweet?text=" + encodeURI(socialMessage) + "&hashtags=zelda,botw,botwfashion");
 
 	var facebookInput = document.getElementById("shareFacebook");
 	facebookInput.setAttribute("href", "https://www.facebook.com/sharer/sharer.php?u=" + shareLink);
