@@ -1,11 +1,16 @@
 function checkForShare() {
-	setDropdownByKey("headColor", getParameterByName("hc"));
-	setDropdownByKey("bodyColor", getParameterByName("bc"));
-	setDropdownByKey("legsColor", getParameterByName("lc"));
+	var id = getParameterByName("id");
+	if(id != null) {
+		setColorsFromLink(id);
+	} else {
+		setDropdownByKey("headColor", getParameterByName("hc"));
+		setDropdownByKey("bodyColor", getParameterByName("bc"));
+		setDropdownByKey("legsColor", getParameterByName("lc"));
 
-	setDropdownByKey("headSet", getParameterByName("hs"));
-	setDropdownByKey("bodySet", getParameterByName("bs"));
-	setDropdownByKey("legsSet", getParameterByName("ls"));
+		setDropdownByKey("headSet", getParameterByName("hs"));
+		setDropdownByKey("bodySet", getParameterByName("bs"));
+		setDropdownByKey("legsSet", getParameterByName("ls"));
+	}
 }
 
 function getLink() {
@@ -41,4 +46,73 @@ function setDropdownByKey(elementName, key) {
 
 function getDropdownKey(elementName) {
 	return document.getElementById(elementName).value
+}
+
+// take 2
+function getKeyByValue(object, value) {
+  return Object.keys(object).find(key => object[key] === value);
+}
+
+var sharingColors = {
+	1: "blue",
+	2: "red",
+	3: "yellow",
+	4: "white",
+	5: "black",
+	6: "purple",
+	7: "green",
+	8: "light-blue",
+	9: "navy",
+	a: "orange",
+	b: "peach",
+	c: "crimson",
+	d: "light-yellow",
+	e: "brown",
+	f: "gray",
+	g: "undyed"
+}
+
+var sharingSet = {
+	1: "hylian",
+	2: "soldier",
+	3: "snoquill",
+	4: "desert-voe",
+	5: "gerudo",
+	6: "rubber",
+	7: "flamebreaker",
+	8: "zora",
+	9: "stealth",
+	a: "climber",
+	b: "barbarian",
+	c: "radiant",
+	d: "ancient",
+	e: "wild",
+	f: "well-worn",
+	g: "unequipped"
+}
+
+function getLink2() {
+	var hck = getKeyByValue(sharingColors, getDropdownKey("headColor"));
+	var bck = getKeyByValue(sharingColors, getDropdownKey("bodyColor"));
+	var lck = getKeyByValue(sharingColors, getDropdownKey("legsColor"));
+
+	var hsk = getKeyByValue(sharingSet, getDropdownKey("headSet"));
+	var bsk = getKeyByValue(sharingSet, getDropdownKey("bodySet"));
+	var lsk = getKeyByValue(sharingSet, getDropdownKey("legsSet"));
+
+	var sharingKey = "http://botw.fashion?id=" + hsk + hck + bsk + bck + lsk + lck;
+
+	console.log(sharingKey);
+}
+
+function setColorsFromLink(id) {
+	var parts = id.split("");
+	if(parts.length >= 6) {
+		setDropdownByKey("headSet", sharingSet[parts[0]]);
+		setDropdownByKey("headColor", sharingColors[parts[1]]);
+		setDropdownByKey("bodySet", sharingSet[parts[2]]);
+		setDropdownByKey("bodyColor", sharingColors[parts[3]]);
+		setDropdownByKey("legsSet", sharingSet[parts[4]]);
+		setDropdownByKey("legsColor", sharingColors[parts[5]]);
+	}
 }
