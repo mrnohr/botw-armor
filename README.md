@@ -1,6 +1,10 @@
 # BOTW Fashion
 Manage color combinations of armor in BOTW
 
+## Website
+
+Use this tool here: http://botw.fashion
+
 ## What is this?
 
 In Legend of Zelda: Breath of the Wild, you can find/earn armor throughout the game. There is also a [shop](https://www.zeldadungeon.net/wiki/Kochi_Dye_Shop) in the game where you can go to change the color of your armor.
