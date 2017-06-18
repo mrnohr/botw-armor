@@ -57,34 +57,38 @@ function allColorChanged() {
 	var colorDropDown = document.getElementById("allColor")
 	var color = colorDropDown.options[colorDropDown.selectedIndex].value;
 
-	var headSetDropDown = document.getElementById("headSet")
-	var headSet = headSetDropDown.options[headSetDropDown.selectedIndex].value;
-	setHeadPicture(headSet, color);
+	if(color != "default") {
+		var headSetDropDown = document.getElementById("headSet")
+		var headSet = headSetDropDown.options[headSetDropDown.selectedIndex].value;
+		setHeadPicture(headSet, color);
 
-	var bodySetDropDown = document.getElementById("bodySet")
-	var bodySet = bodySetDropDown.options[bodySetDropDown.selectedIndex].value;
-	setBodyPicture(bodySet, color);
+		var bodySetDropDown = document.getElementById("bodySet")
+		var bodySet = bodySetDropDown.options[bodySetDropDown.selectedIndex].value;
+		setBodyPicture(bodySet, color);
 
-	var legsSetDropDown = document.getElementById("legsSet")
-	var legsSet = legsSetDropDown.options[legsSetDropDown.selectedIndex].value;
-	setLegsPicture(legsSet, color);
+		var legsSetDropDown = document.getElementById("legsSet")
+		var legsSet = legsSetDropDown.options[legsSetDropDown.selectedIndex].value;
+		setLegsPicture(legsSet, color);
+	}
 }
 
 function allSetChanged() {
 	var setDropDown = document.getElementById("allSet")
 	var set = setDropDown.options[setDropDown.selectedIndex].value;
 
-	var headColorDropDown = document.getElementById("headColor")
-	var headColor = headColorDropDown.options[headColorDropDown.selectedIndex].value;
-	setHeadPicture(set, headColor);
+	if(set != "default") {
+		var headColorDropDown = document.getElementById("headColor")
+		var headColor = headColorDropDown.options[headColorDropDown.selectedIndex].value;
+		setHeadPicture(set, headColor);
 
-	var bodyColorDropDown = document.getElementById("bodyColor")
-	var bodyColor = bodyColorDropDown.options[bodyColorDropDown.selectedIndex].value;
-	setBodyPicture(set, bodyColor);
+		var bodyColorDropDown = document.getElementById("bodyColor")
+		var bodyColor = bodyColorDropDown.options[bodyColorDropDown.selectedIndex].value;
+		setBodyPicture(set, bodyColor);
 
-	var legsColorDropDown = document.getElementById("legsColor")
-	var legsColor = legsColorDropDown.options[legsColorDropDown.selectedIndex].value;
-	setLegsPicture(set, legsColor);
+		var legsColorDropDown = document.getElementById("legsColor")
+		var legsColor = legsColorDropDown.options[legsColorDropDown.selectedIndex].value;
+		setLegsPicture(set, legsColor);
+	}
 }
 
 // Back/Next buttons
