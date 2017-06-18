@@ -133,5 +133,5 @@ function fillShareLink() {
 	twitterInput.setAttribute("href", "https://twitter.com/intent/tweet?text=" + encodeURI(socialMessage) + "&hashtags=zelda,botw,botwfashion");
 
 	var facebookInput = document.getElementById("shareFacebook");
-	facebookInput.setAttribute("href", "https://www.facebook.com/sharer/sharer.php?u=" + shareLink + "%2F&amp;src=sdkpreparse");
+	facebookInput.setAttribute("href", "https://www.facebook.com/sharer/sharer.php?u=" + shareLink);
 }
