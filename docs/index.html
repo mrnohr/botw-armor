@@ -31,6 +31,7 @@
 	<meta property="og:title" content="BOTW Fashion" />
 	<meta property="og:description" content="See what your armor will look like without visiting the dye shop." />
 	<meta property="og:image" content="http://botw.fashion/img/social-logo.png" />
+	<meta property="fb:app_id" content="1151957371575913" />
 
 	<title>BOTW Fashion</title>
 
@@ -256,9 +257,10 @@
 							<a id="shareTweet" class="btn btn-info" href="https://twitter.com/intent/tweet?text=botw.fashion" target="_blank">
 								<i class="fa fa-twitter"></i> Tweet
 							</a>
-							<a id="shareFacebook" class="btn btn-primary" href="https://www.facebook.com/sharer/sharer.php?u=botw.fashion" target="_blank">
-								<i class="fa fa-facebook"></i> Facebook
-							</a>
+							<div class="fb-share-button" data-href="http://botw.fashion" data-layout="button" data-size="small" data-mobile-iframe="true">
+								<a id="shareFacebook" class="btn btn-primary fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fbotw.fashion%2F&amp;src=sdkpreparse">
+									<i class="fa fa-facebook"></i> Share on Facebook</a>
+							</div>
 						</p>
 					</div>
 					<div class="modal-footer">
@@ -379,6 +381,17 @@
 
 		ga('create', 'UA-610084-17', 'auto');
 		ga('send', 'pageview');
+	</script>
+
+	<!-- Facebook code for sharing -->
+	<div id="fb-root"></div>
+	<script>(function(d, s, id) {
+		var js, fjs = d.getElementsByTagName(s)[0];
+		if (d.getElementById(id)) return;
+		js = d.createElement(s); js.id = id;
+		js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.9&appId=232849466748016";
+		fjs.parentNode.insertBefore(js, fjs);
+		}(document, 'script', 'facebook-jssdk'));
 	</script>
   </body>
 </html>
