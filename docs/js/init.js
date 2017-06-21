@@ -62,6 +62,7 @@ function fillArmorDropdown(elementName) {
 		"climber":"Climber",
 		"barbarian":"Barbarian",
 		"radiant":"Radiant",
+		"radiant-night":"Radiant (night)",
 		"ancient":"Ancient",
 		"wild":"Wild",
 		"well-worn":"Well Worn",

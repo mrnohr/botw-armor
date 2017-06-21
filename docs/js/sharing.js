@@ -91,7 +91,8 @@ var sharingSet = {
 	g: "unequipped",
 	h: "champion",
 	i: "sand-boots",
-	j: "snow-boots"
+	j: "snow-boots",
+	k: "radiant-night"
 }
 
 function getLink2() {
