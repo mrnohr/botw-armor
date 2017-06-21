@@ -92,7 +92,8 @@ var sharingSet = {
 	h: "champion",
 	i: "sand-boots",
 	j: "snow-boots",
-	k: "radiant-night"
+	k: "radiant-night",
+	l: "warm-doublet"
 }
 
 function getLink2() {

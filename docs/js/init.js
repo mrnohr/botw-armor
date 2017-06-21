@@ -82,10 +82,15 @@ function fillArmorDropdown(elementName) {
 function fillAdditionalBody(elementName) {
 	var dropDown = document.getElementById(elementName);
 
-	var sand = document.createElement("option");
-	sand.value = "champion";
-	sand.innerHTML = "Champion"
-	dropDown.appendChild(sand);
+	var champ = document.createElement("option");
+	champ.value = "champion";
+	champ.innerHTML = "Champion"
+	dropDown.appendChild(champ);
+
+	var warm = document.createElement("option");
+	warm.value = "warm-doublet";
+	warm.innerHTML = "Warm Doublet"
+	dropDown.appendChild(warm);
 }
 
 function fillAdditionalLegs(elementName) {
