@@ -93,7 +93,14 @@ var sharingSet = {
 	i: "sand-boots",
 	j: "snow-boots",
 	k: "radiant-night",
-	l: "warm-doublet"
+	l: "warm-doublet",
+	m: "amber-earings",
+	n: "ruby-circlet",
+	o: "sapphire-circlet",
+	p: "topaz-earings",
+	q: "opal-earings",
+	r: "thunder-helm",
+	s: "diamond-circlet"
 }
 
 function getLink2() {

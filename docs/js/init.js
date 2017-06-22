@@ -12,6 +12,7 @@ function init() {
 	fillArmorDropdown("legsSet");
 	fillArmorDropdown("allSet");
 
+	fillAdditionalHead("headSet");
 	fillAdditionalBody("bodySet");
 	fillAdditionalLegs("legsSet");
 
@@ -77,6 +78,45 @@ function fillArmorDropdown(elementName) {
 		option.innerHTML = armors[key];
 		dropDown.appendChild(option);
 	}
+}
+
+function fillAdditionalHead(elementName) {
+	var dropDown = document.getElementById(elementName);
+
+	var item = document.createElement("option");
+	item.value = "amber-earings";
+	item.innerHTML = "Amber Earings"
+	dropDown.appendChild(item);
+
+	item = document.createElement("option");
+	item.value = "ruby-circlet";
+	item.innerHTML = "Ruby Circlet"
+	dropDown.appendChild(item);
+
+	item = document.createElement("option");
+	item.value = "sapphire-circlet";
+	item.innerHTML = "Sapphire Circlet"
+	dropDown.appendChild(item);
+
+	item = document.createElement("option");
+	item.value = "topaz-earings";
+	item.innerHTML = "Topaz Earings"
+	dropDown.appendChild(item);
+
+	item = document.createElement("option");
+	item.value = "opal-earings";
+	item.innerHTML = "Opal Earings"
+	dropDown.appendChild(item);
+
+	item = document.createElement("option");
+	item.value = "thunder-helm";
+	item.innerHTML = "Thunder Helm"
+	dropDown.appendChild(item);
+
+	item = document.createElement("option");
+	item.value = "diamond-circlet";
+	item.innerHTML = "Diamond Circlet"
+	dropDown.appendChild(item);
 }
 
 function fillAdditionalBody(elementName) {
