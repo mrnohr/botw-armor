@@ -1,6 +1,6 @@
 import scripts.*
 
-String setName = "thunder-helm"
+String setName = "switch-shirt"
 
 File sourceDir = new File("raw/${setName}")
 assert sourceDir.exists()
