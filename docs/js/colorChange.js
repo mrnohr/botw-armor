@@ -5,6 +5,8 @@ function setHeadPicture(set, color) {
 
 	document.getElementById("headSet").value = set;
 	document.getElementById("headColor").value = color;
+
+	updateName();
 }
 
 function setBodyPicture(set, color) {
@@ -13,6 +15,8 @@ function setBodyPicture(set, color) {
 
 	document.getElementById("bodySet").value = set;
 	document.getElementById("bodyColor").value = color;
+
+	updateName();
 }
 function setLegsPicture(set, color) {
 	var legsImg = document.getElementById("legsImg");
@@ -20,6 +24,8 @@ function setLegsPicture(set, color) {
 
 	document.getElementById("legsSet").value = set;
 	document.getElementById("legsColor").value = color;
+
+	updateName();
 }
 
 // Component dropdown changed
@@ -252,4 +258,25 @@ function legsColorBack() {
 	var color = colorDropDown.options[index].value;
 
 	setLegsPicture(set, color);
+}
+
+function updateName() {
+	var headSet = document.getElementById("headSet");
+	var headColor = document.getElementById("headColor")
+	var headSetName = headSet.options[headSet.selectedIndex].innerHTML;
+	var headColorName = headColor.options[headColor.selectedIndex].innerHTML;
+
+	var bodySet = document.getElementById("bodySet");
+	var bodyColor = document.getElementById("bodyColor")
+	var bodySetName = bodySet.options[bodySet.selectedIndex].innerHTML;
+	var bodyColorName = bodyColor.options[bodyColor.selectedIndex].innerHTML;
+
+	var legsSet = document.getElementById("legsSet");
+	var legsColor = document.getElementById("legsColor")
+	var legsSetName = legsSet.options[legsSet.selectedIndex].innerHTML;
+	var legsColorName = legsColor.options[legsColor.selectedIndex].innerHTML;
+
+	document.getElementById("comboNameHead").innerHTML = headColorName + " " + headSetName;
+	document.getElementById("comboNameBody").innerHTML = bodyColorName + " " + bodySetName;
+	document.getElementById("comboNameLegs").innerHTML = legsColorName + " " + legsSetName;
 }
