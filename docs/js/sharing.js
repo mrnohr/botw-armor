@@ -100,7 +100,11 @@ var sharingSet = {
 	p: "topaz-earings",
 	q: "opal-earings",
 	r: "thunder-helm",
-	s: "diamond-circlet"
+	s: "diamond-circlet",
+	t: "bokoblin",
+	u: "moblin",
+	v: "lizalfos",
+	w: "lynel"
 }
 
 function getLink2() {

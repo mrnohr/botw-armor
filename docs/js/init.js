@@ -117,6 +117,26 @@ function fillAdditionalHead(elementName) {
 	item.value = "diamond-circlet";
 	item.innerHTML = "Diamond Circlet"
 	dropDown.appendChild(item);
+
+	item = document.createElement("option");
+	item.value = "bokoblin";
+	item.innerHTML = "Bokoblin Mask"
+	dropDown.appendChild(item);
+
+	item = document.createElement("option");
+	item.value = "moblin";
+	item.innerHTML = "Moblin Mask"
+	dropDown.appendChild(item);
+
+	item = document.createElement("option");
+	item.value = "lizalfos";
+	item.innerHTML = "Lizalfos Mask"
+	dropDown.appendChild(item);
+
+	item = document.createElement("option");
+	item.value = "lynel";
+	item.innerHTML = "Lynel Mask"
+	dropDown.appendChild(item);
 }
 
 function fillAdditionalBody(elementName) {
