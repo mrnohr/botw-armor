@@ -116,6 +116,11 @@ function fillAdditionalHead(elementName) {
 	dropDown.appendChild(item);
 
 	item = document.createElement("option");
+	item.value = "sheiks-mask";
+	item.innerHTML = "Sheik's Mask"
+	dropDown.appendChild(item);
+	
+	item = document.createElement("option");
 	item.value = "thunder-helm";
 	item.innerHTML = "Thunder Helm"
 	dropDown.appendChild(item);

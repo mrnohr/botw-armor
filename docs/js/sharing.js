@@ -112,7 +112,8 @@ var sharingSet = {
 	B: "wind",
 	C: "twilight",
 	D: "sky",
-	E: "hero"
+	E: "hero",
+	F: "sheiks-mask"
 }
 
 function getLink2() {
