@@ -105,7 +105,7 @@ var sharingSet = {
 	u: "moblin",
 	v: "lizalfos",
 	w: "lynel",
-	x: "dark"
+	x: "dark",
 	y: "switch-shirt",
 	z: "fierce-deity",
 	A: "time",
