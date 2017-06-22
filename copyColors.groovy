@@ -1,5 +1,5 @@
-String bodyPart = "body"
-String set = "switch-shirt"
+String bodyPart = "legs"
+String set = "wind"
 
 File inputFile = new File("docs/images/${set}/${bodyPart}.png")
 
@@ -21,7 +21,8 @@ def colors = [
 	"crimson":"Crimson",
 	"light-yellow":"Light Yellow",
 	"brown":"Brown",
-	"gray":"Gray"
+	"gray":"Gray",
+	"undyed":"Original"
 ]
 
 colors.each {key, value ->
