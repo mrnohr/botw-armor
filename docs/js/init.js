@@ -62,12 +62,18 @@ function fillArmorDropdown(elementName) {
 		"stealth":"Stealth",
 		"climber":"Climber",
 		"barbarian":"Barbarian",
+		"fierce-deity":"Fierce Deity",
 		"radiant":"Radiant",
 		"radiant-night":"Radiant (night)",
 		"ancient":"Ancient",
 		"wild":"Wild",
 		"well-worn":"Well Worn",
 		"dark":"Dark",
+		"time":"Time",
+		"wind":"Wind",
+		"twilight":"Twilight",
+		"sky":"Sky",
+		"hero":"Hero",
 		"unequipped":"Unequipped"
 	};
 

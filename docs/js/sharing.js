@@ -106,7 +106,13 @@ var sharingSet = {
 	v: "lizalfos",
 	w: "lynel",
 	x: "dark"
-	y: "switch-shirt"
+	y: "switch-shirt",
+	z: "fierce-deity",
+	A: "time",
+	B: "wind",
+	C: "twilight",
+	D: "sky",
+	E: "hero"
 }
 
 function getLink2() {
