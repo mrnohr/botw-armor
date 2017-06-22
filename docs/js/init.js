@@ -143,15 +143,20 @@ function fillAdditionalHead(elementName) {
 function fillAdditionalBody(elementName) {
 	var dropDown = document.getElementById(elementName);
 
-	var champ = document.createElement("option");
-	champ.value = "champion";
-	champ.innerHTML = "Champion"
-	dropDown.appendChild(champ);
+	var item = document.createElement("option");
+	item.value = "champion";
+	item.innerHTML = "Champion"
+	dropDown.appendChild(item);
 
-	var warm = document.createElement("option");
-	warm.value = "warm-doublet";
-	warm.innerHTML = "Warm Doublet"
-	dropDown.appendChild(warm);
+	item = document.createElement("option");
+	item.value = "warm-doublet";
+	item.innerHTML = "Warm Doublet"
+	dropDown.appendChild(item);
+
+	item = document.createElement("option");
+	item.value = "switch-shirt";
+	item.innerHTML = "Nintendo Switch Shirt"
+	dropDown.appendChild(item);
 }
 
 function fillAdditionalLegs(elementName) {

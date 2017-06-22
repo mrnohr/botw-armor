@@ -106,6 +106,7 @@ var sharingSet = {
 	v: "lizalfos",
 	w: "lynel",
 	x: "dark"
+	y: "switch-shirt"
 }
 
 function getLink2() {
