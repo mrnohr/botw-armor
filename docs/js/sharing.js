@@ -104,7 +104,8 @@ var sharingSet = {
 	t: "bokoblin",
 	u: "moblin",
 	v: "lizalfos",
-	w: "lynel"
+	w: "lynel",
+	x: "dark"
 }
 
 function getLink2() {

@@ -67,6 +67,7 @@ function fillArmorDropdown(elementName) {
 		"ancient":"Ancient",
 		"wild":"Wild",
 		"well-worn":"Well Worn",
+		"dark":"Dark",
 		"unequipped":"Unequipped"
 	};
 
