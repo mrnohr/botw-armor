@@ -1,6 +1,6 @@
 function init() {
-	addChooseOption("allSet", "Choose a set for all");
-	addChooseOption("allColor", "Choose a color for all");
+    addOptionToSelect("allSet", "default", "-- Choose a set for all --")
+    addOptionToSelect("allColor", "default", "-- Choose a set for all --")
 
 	fillColorDropdown("headColor");
 	fillColorDropdown("bodyColor");
@@ -39,13 +39,8 @@ function fillColorDropdown(elementName) {
 		"undyed":"Original"
 	};
 
-	var dropDown = document.getElementById(elementName);
-
 	for(var key in colors) {
-		var option = document.createElement("option");
-		option.value = key;
-		option.innerHTML = colors[key];
-		dropDown.appendChild(option);
+        addOptionToSelect(elementName, key, colors[key]);
 	}
 }
 
@@ -77,118 +72,41 @@ function fillArmorDropdown(elementName) {
 		"unequipped":"Unequipped"
 	};
 
-	var dropDown = document.getElementById(elementName);
-
 	for(var key in armors) {
-		var option = document.createElement("option");
-		option.value = key;
-		option.innerHTML = armors[key];
-		dropDown.appendChild(option);
+		addOptionToSelect(elementName, key, armors[key]);
 	}
 }
 
 function fillAdditionalHead(elementName) {
-	var dropDown = document.getElementById(elementName);
-
-	var item = document.createElement("option");
-	item.value = "amber-earings";
-	item.innerHTML = "Amber Earings"
-	dropDown.appendChild(item);
-
-	item = document.createElement("option");
-	item.value = "ruby-circlet";
-	item.innerHTML = "Ruby Circlet"
-	dropDown.appendChild(item);
-
-	item = document.createElement("option");
-	item.value = "sapphire-circlet";
-	item.innerHTML = "Sapphire Circlet"
-	dropDown.appendChild(item);
-
-	item = document.createElement("option");
-	item.value = "topaz-earings";
-	item.innerHTML = "Topaz Earings"
-	dropDown.appendChild(item);
-
-	item = document.createElement("option");
-	item.value = "opal-earings";
-	item.innerHTML = "Opal Earings"
-	dropDown.appendChild(item);
-
-	item = document.createElement("option");
-	item.value = "sheiks-mask";
-	item.innerHTML = "Sheik's Mask"
-	dropDown.appendChild(item);
-
-	item = document.createElement("option");
-	item.value = "thunder-helm";
-	item.innerHTML = "Thunder Helm"
-	dropDown.appendChild(item);
-
-	item = document.createElement("option");
-	item.value = "diamond-circlet";
-	item.innerHTML = "Diamond Circlet"
-	dropDown.appendChild(item);
-
-	item = document.createElement("option");
-	item.value = "bokoblin";
-	item.innerHTML = "Bokoblin Mask"
-	dropDown.appendChild(item);
-
-	item = document.createElement("option");
-	item.value = "moblin";
-	item.innerHTML = "Moblin Mask"
-	dropDown.appendChild(item);
-
-	item = document.createElement("option");
-	item.value = "lizalfos";
-	item.innerHTML = "Lizalfos Mask"
-	dropDown.appendChild(item);
-
-	item = document.createElement("option");
-	item.value = "lynel";
-	item.innerHTML = "Lynel Mask"
-	dropDown.appendChild(item);
+    addOptionToSelect(elementName, "amber-earings", "Amber Earings");
+    addOptionToSelect(elementName, "ruby-circlet", "Ruby Circlet");
+    addOptionToSelect(elementName, "sapphire-circlet", "Sapphire Circlet");
+    addOptionToSelect(elementName, "topaz-earings", "Topaz Earings");
+    addOptionToSelect(elementName, "opal-earings", "Opal Earings");
+    addOptionToSelect(elementName, "sheiks-mask", "Sheik's Mask");
+    addOptionToSelect(elementName, "thunder-helm", "Thunder Helm");
+    addOptionToSelect(elementName, "diamond-circlet", "Diamond Circlet");
+    addOptionToSelect(elementName, "bokoblin", "Bokoblin Mask");
+    addOptionToSelect(elementName, "moblin", "Moblin Mask");
+    addOptionToSelect(elementName, "lizalfos", "Lizalfos Mask");
+    addOptionToSelect(elementName, "lynel", "Lynel Mask");
 }
 
 function fillAdditionalBody(elementName) {
-	var dropDown = document.getElementById(elementName);
-
-	var item = document.createElement("option");
-	item.value = "champion";
-	item.innerHTML = "Champion"
-	dropDown.appendChild(item);
-
-	item = document.createElement("option");
-	item.value = "warm-doublet";
-	item.innerHTML = "Warm Doublet"
-	dropDown.appendChild(item);
-
-	item = document.createElement("option");
-	item.value = "switch-shirt";
-	item.innerHTML = "Nintendo Switch Shirt"
-	dropDown.appendChild(item);
+    addOptionToSelect(elementName, "champion", "Champion");
+    addOptionToSelect(elementName, "warm-doublet", "Warm Doublet");
+    addOptionToSelect(elementName, "switch-shirt", "Nintendo Switch Shirt");
 }
 
 function fillAdditionalLegs(elementName) {
-	var dropDown = document.getElementById(elementName);
-
-	var sand = document.createElement("option");
-	sand.value = "sand-boots";
-	sand.innerHTML = "Sand Boots"
-	dropDown.appendChild(sand);
-
-	var snow = document.createElement("option");
-	snow.value = "snow-boots";
-	snow.innerHTML = "Snow Boots"
-	dropDown.appendChild(snow);
+    addOptionToSelect(elementName, "sand-boots", "Sand Boots");
+    addOptionToSelect(elementName, "snow-boots", "Snow Boots");
 }
 
-function addChooseOption(elementName, text) {
-	var dropDown = document.getElementById(elementName);
-
-	var choose = document.createElement("option");
-	choose.value = "default";
-	choose.innerHTML = "-- " + text + " --"
-	dropDown.appendChild(choose);
+function addOptionToSelect(elementName, key, displayText) {
+    var dropDown = document.getElementById(elementName);
+    var item = document.createElement("option");
+    item.value = key;
+    item.innerHTML = displayText;
+    dropDown.appendChild(item);
 }
