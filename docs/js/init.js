@@ -1,5 +1,5 @@
 function init() {
-    addOptionToSelect("allSet", "default", "-- Choose a set for all --")
+
     addOptionToSelect("allColor", "default", "-- Choose a set for all --")
 
 	fillColorDropdown("headColor");
@@ -7,14 +7,10 @@ function init() {
 	fillColorDropdown("legsColor");
 	fillColorDropdown("allColor");
 
-	fillArmorDropdown("headSet");
-	fillArmorDropdown("bodySet");
-	fillArmorDropdown("legsSet");
-	fillArmorDropdown("allSet");
-
-	fillAdditionalHead("headSet");
-	fillAdditionalBody("bodySet");
-	fillAdditionalLegs("legsSet");
+    fillAllArmor();
+	fillHeadArmor();
+    fillBodyArmor();
+    fillLegsArmor();
 
 	checkForShare();
 }
@@ -44,64 +40,40 @@ function fillColorDropdown(elementName) {
 	}
 }
 
-function fillArmorDropdown(elementName) {
-	var armors = {
-		"hylian":"Hylian",
-		"soldier":"Soldier",
-		"snoquill":"Snoquill",
-		"desert-voe":"Desert Voe",
-		"gerudo":"Gerudo",
-		"rubber":"Rubber",
-		"flamebreaker":"Flamebreaker",
-		"zora":"Zora",
-		"stealth":"Stealth",
-		"climber":"Climber",
-		"barbarian":"Barbarian",
-		"fierce-deity":"Fierce Deity",
-		"radiant":"Radiant",
-		"radiant-night":"Radiant (night)",
-		"ancient":"Ancient",
-		"wild":"Wild",
-		"well-worn":"Well Worn",
-		"dark":"Dark",
-		"time":"Time",
-		"wind":"Wind",
-		"twilight":"Twilight",
-		"sky":"Sky",
-		"hero":"Hero",
-		"unequipped":"Unequipped"
-	};
+function fillHeadArmor() {
+    var armors = getHeadArmor();
 
-	for(var key in armors) {
-		addOptionToSelect(elementName, key, armors[key]);
-	}
+    for (var i = 0; i < armors.length; i++) {
+        addOptionToSelect("headSet", armors[i].id, armors[i].name);
+    }
 }
 
-function fillAdditionalHead(elementName) {
-    addOptionToSelect(elementName, "amber-earings", "Amber Earings");
-    addOptionToSelect(elementName, "ruby-circlet", "Ruby Circlet");
-    addOptionToSelect(elementName, "sapphire-circlet", "Sapphire Circlet");
-    addOptionToSelect(elementName, "topaz-earings", "Topaz Earings");
-    addOptionToSelect(elementName, "opal-earings", "Opal Earings");
-    addOptionToSelect(elementName, "sheiks-mask", "Sheik's Mask");
-    addOptionToSelect(elementName, "thunder-helm", "Thunder Helm");
-    addOptionToSelect(elementName, "diamond-circlet", "Diamond Circlet");
-    addOptionToSelect(elementName, "bokoblin", "Bokoblin Mask");
-    addOptionToSelect(elementName, "moblin", "Moblin Mask");
-    addOptionToSelect(elementName, "lizalfos", "Lizalfos Mask");
-    addOptionToSelect(elementName, "lynel", "Lynel Mask");
+function fillBodyArmor() {
+    var armors = getBodyArmor();
+
+    for (var i = 0; i < armors.length; i++) {
+        addOptionToSelect("bodySet", armors[i].id, armors[i].name);
+    }
 }
 
-function fillAdditionalBody(elementName) {
-    addOptionToSelect(elementName, "champion", "Champion");
-    addOptionToSelect(elementName, "warm-doublet", "Warm Doublet");
-    addOptionToSelect(elementName, "switch-shirt", "Nintendo Switch Shirt");
+function fillLegsArmor() {
+    var armors = getLegsArmor();
+
+    for (var i = 0; i < armors.length; i++) {
+        addOptionToSelect("legsSet", armors[i].id, armors[i].name);
+    }
 }
 
-function fillAdditionalLegs(elementName) {
-    addOptionToSelect(elementName, "sand-boots", "Sand Boots");
-    addOptionToSelect(elementName, "snow-boots", "Snow Boots");
+function fillAllArmor() {
+    addOptionToSelect("allSet", "default", "-- Choose a set for all --")
+
+    var armors = getAllArmor();
+
+    for (var i = 0; i < armors.length; i++) {
+        addOptionToSelect("allSet", armors[i].id, armors[i].name);
+    }
 }
+
 
 function addOptionToSelect(elementName, key, displayText) {
     var dropDown = document.getElementById(elementName);

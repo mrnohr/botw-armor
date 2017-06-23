@@ -2,7 +2,7 @@ function checkForShare() {
 	var id = getParameterByName("id");
 	if(id != null) {
 		setColorsFromLink(id);
-	} else {
+	} else if (getParameterByName("hc") != null) {
 		setDropdownByKey("headColor", getParameterByName("hc"));
 		setDropdownByKey("bodyColor", getParameterByName("bc"));
 		setDropdownByKey("legsColor", getParameterByName("lc"));
@@ -10,19 +10,16 @@ function checkForShare() {
 		setDropdownByKey("headSet", getParameterByName("hs"));
 		setDropdownByKey("bodySet", getParameterByName("bs"));
 		setDropdownByKey("legsSet", getParameterByName("ls"));
-	}
-}
+	} else {
+		//default
+        setDropdownByKey("headSet", "hylian");
+        setDropdownByKey("bodySet", "hylian");
+        setDropdownByKey("legsSet", "hylian");
 
-function getLink() {
-	var link = "http://botw.fashion";
-	link += "?hc=" + getDropdownKey("headColor");
-	link += "&bc=" + getDropdownKey("bodyColor");
-	link += "&lc=" + getDropdownKey("legsColor");
-	link += "&hs=" + getDropdownKey("headSet");
-	link += "&bs=" + getDropdownKey("bodySet");
-	link += "&ls=" + getDropdownKey("legsSet");
-
-	console.log(link);
+        setDropdownByKey("headColor", "blue");
+        setDropdownByKey("bodyColor", "blue");
+        setDropdownByKey("legsColor", "blue");
+    }
 }
 
 //https://stackoverflow.com/questions/901115/how-can-i-get-query-string-values-in-javascript
@@ -72,58 +69,14 @@ var sharingColors = {
 	g: "undyed"
 }
 
-var sharingSet = {
-	1: "hylian",
-	2: "soldier",
-	3: "snoquill",
-	4: "desert-voe",
-	5: "gerudo",
-	6: "rubber",
-	7: "flamebreaker",
-	8: "zora",
-	9: "stealth",
-	a: "climber",
-	b: "barbarian",
-	c: "radiant",
-	d: "ancient",
-	e: "wild",
-	f: "well-worn",
-	g: "unequipped",
-	h: "champion",
-	i: "sand-boots",
-	j: "snow-boots",
-	k: "radiant-night",
-	l: "warm-doublet",
-	m: "amber-earings",
-	n: "ruby-circlet",
-	o: "sapphire-circlet",
-	p: "topaz-earings",
-	q: "opal-earings",
-	r: "thunder-helm",
-	s: "diamond-circlet",
-	t: "bokoblin",
-	u: "moblin",
-	v: "lizalfos",
-	w: "lynel",
-	x: "dark",
-	y: "switch-shirt",
-	z: "fierce-deity",
-	A: "time",
-	B: "wind",
-	C: "twilight",
-	D: "sky",
-	E: "hero",
-	F: "sheiks-mask"
-}
-
 function getLink2() {
 	var hck = getKeyByValue(sharingColors, getDropdownKey("headColor"));
 	var bck = getKeyByValue(sharingColors, getDropdownKey("bodyColor"));
 	var lck = getKeyByValue(sharingColors, getDropdownKey("legsColor"));
 
-	var hsk = getKeyByValue(sharingSet, getDropdownKey("headSet"));
-	var bsk = getKeyByValue(sharingSet, getDropdownKey("bodySet"));
-	var lsk = getKeyByValue(sharingSet, getDropdownKey("legsSet"));
+	var hsk = getArmorShareKey(getDropdownKey("headSet"));
+	var bsk = getArmorShareKey(getDropdownKey("bodySet"));
+	var lsk = getArmorShareKey(getDropdownKey("legsSet"));
 
 	var sharingKey = "http://botw.fashion?id=" + hsk + hck + bsk + bck + lsk + lck;
 
@@ -134,11 +87,11 @@ function getLink2() {
 function setColorsFromLink(id) {
 	var parts = id.split("");
 	if(parts.length >= 6) {
-		setDropdownByKey("headSet", sharingSet[parts[0]]);
+		setDropdownByKey("headSet", getArmorIdFromShareKey(parts[0]));
 		setDropdownByKey("headColor", sharingColors[parts[1]]);
-		setDropdownByKey("bodySet", sharingSet[parts[2]]);
+		setDropdownByKey("bodySet", getArmorIdFromShareKey(parts[2]));
 		setDropdownByKey("bodyColor", sharingColors[parts[3]]);
-		setDropdownByKey("legsSet", sharingSet[parts[4]]);
+		setDropdownByKey("legsSet", getArmorIdFromShareKey(parts[4]));
 		setDropdownByKey("legsColor", sharingColors[parts[5]]);
 	}
 }
