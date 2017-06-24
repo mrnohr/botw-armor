@@ -93,148 +93,90 @@ function findBack(dropDown) {
 	return index;
 }
 
+function selectNext(elementName) {
+    var dropDown = document.getElementById(elementName);
+    var index = findNext(dropDown);
+    var set = dropDown.options[index].value;
+    dropDown.value = set;
+}
+
+function selectBack(elementName) {
+    var dropDown = document.getElementById(elementName);
+    var index = findBack(dropDown);
+    var set = dropDown.options[index].value;
+    dropDown.value = set;
+}
+
 function headSetNext() {
-	var setDropDown = document.getElementById("headSet");
-	var colorDropDown = document.getElementById("headColor")
-
-	var index = findNext(setDropDown);
-
-	var set = setDropDown.options[index].value;
-	var color = colorDropDown.options[colorDropDown.selectedIndex].value;
-
-	setHeadPicture(set, color);
+	selectNext("headSet");
+    var values = getSelected("headSet", "headColor");
+    setHeadPicture(values.set, values.color);
 }
 
 function headSetBack() {
-	var setDropDown = document.getElementById("headSet");
-	var colorDropDown = document.getElementById("headColor")
-
-	var index = findBack(setDropDown);
-
-	var set = setDropDown.options[index].value;
-	var color = colorDropDown.options[colorDropDown.selectedIndex].value;
-
-	setHeadPicture(set, color);
+    selectBack("headSet");
+    var values = getSelected("headSet", "headColor");
+    setHeadPicture(values.set, values.color);
 }
 
 function headColorNext() {
-	var setDropDown = document.getElementById("headSet");
-	var colorDropDown = document.getElementById("headColor")
-
-	var index = findNext(colorDropDown);
-
-	var set = setDropDown.options[setDropDown.selectedIndex].value;
-	var color = colorDropDown.options[index].value;
-
-	setHeadPicture(set, color);
+    selectNext("headColor");
+    var values = getSelected("headSet", "headColor");
+    setHeadPicture(values.set, values.color);
 }
 
 function headColorBack() {
-	var setDropDown = document.getElementById("headSet");
-	var colorDropDown = document.getElementById("headColor")
-
-	var index = findBack(colorDropDown);
-
-	var set = setDropDown.options[setDropDown.selectedIndex].value;
-	var color = colorDropDown.options[index].value;
-
-	setHeadPicture(set, color);
+    selectBack("headColor");
+    var values = getSelected("headSet", "headColor");
+    setHeadPicture(values.set, values.color);
 }
 
 function bodySetNext() {
-	var setDropDown = document.getElementById("bodySet");
-	var colorDropDown = document.getElementById("bodyColor")
-
-	var index = findNext(setDropDown);
-
-	var set = setDropDown.options[index].value;
-	var color = colorDropDown.options[colorDropDown.selectedIndex].value;
-
-	setBodyPicture(set, color);
+    selectNext("bodySet");
+    var values = getSelected("bodySet", "bodyColor");
+    setBodyPicture(values.set, values.color);
 }
 
 function bodySetBack() {
-	var setDropDown = document.getElementById("bodySet");
-	var colorDropDown = document.getElementById("bodyColor")
-
-	var index = findBack(setDropDown);
-
-	var set = setDropDown.options[index].value;
-	var color = colorDropDown.options[colorDropDown.selectedIndex].value;
-
-	setBodyPicture(set, color);
+    selectBack("bodySet");
+    var values = getSelected("bodySet", "bodyColor");
+    setBodyPicture(values.set, values.color);
 }
 
 function bodyColorNext() {
-	var setDropDown = document.getElementById("bodySet");
-	var colorDropDown = document.getElementById("bodyColor")
-
-	var index = findNext(colorDropDown);
-
-	var set = setDropDown.options[setDropDown.selectedIndex].value;
-	var color = colorDropDown.options[index].value;
-
-	setBodyPicture(set, color);
+    selectNext("bodyColor");
+    var values = getSelected("bodySet", "bodyColor");
+    setBodyPicture(values.set, values.color);
 }
 
 function bodyColorBack() {
-	var setDropDown = document.getElementById("bodySet");
-	var colorDropDown = document.getElementById("bodyColor")
-
-	var index = findBack(colorDropDown);
-
-	var set = setDropDown.options[setDropDown.selectedIndex].value;
-	var color = colorDropDown.options[index].value;
-
-	setBodyPicture(set, color);
+    selectBack("bodyColor");
+    var values = getSelected("bodySet", "bodyColor");
+    setBodyPicture(values.set, values.color);
 }
 
 function legsSetNext() {
-	var setDropDown = document.getElementById("legsSet");
-	var colorDropDown = document.getElementById("legsColor")
-
-	var index = findNext(setDropDown);
-
-	var set = setDropDown.options[index].value;
-	var color = colorDropDown.options[colorDropDown.selectedIndex].value;
-
-	setLegsPicture(set, color);
+    selectNext("legsSet");
+    var values = getSelected("legsSet", "legsColor");
+    setLegsPicture(values.set, values.color);
 }
 
 function legsSetBack() {
-	var setDropDown = document.getElementById("legsSet");
-	var colorDropDown = document.getElementById("legsColor")
-
-	var index = findBack(setDropDown);
-
-	var set = setDropDown.options[index].value;
-	var color = colorDropDown.options[colorDropDown.selectedIndex].value;
-
-	setLegsPicture(set, color);
+    selectBack("legsSet");
+    var values = getSelected("legsSet", "legsColor");
+    setLegsPicture(values.set, values.color);
 }
 
 function legsColorNext() {
-	var setDropDown = document.getElementById("legsSet");
-	var colorDropDown = document.getElementById("legsColor")
-
-	var index = findNext(colorDropDown);
-
-	var set = setDropDown.options[setDropDown.selectedIndex].value;
-	var color = colorDropDown.options[index].value;
-
-	setLegsPicture(set, color);
+    selectNext("legsColor");
+    var values = getSelected("legsSet", "legsColor");
+    setLegsPicture(values.set, values.color);
 }
 
 function legsColorBack() {
-	var setDropDown = document.getElementById("legsSet");
-	var colorDropDown = document.getElementById("legsColor")
-
-	var index = findBack(colorDropDown);
-
-	var set = setDropDown.options[setDropDown.selectedIndex].value;
-	var color = colorDropDown.options[index].value;
-
-	setLegsPicture(set, color);
+    selectBack("legsColor");
+    var values = getSelected("legsSet", "legsColor");
+    setLegsPicture(values.set, values.color);
 }
 
 function updateName() {
