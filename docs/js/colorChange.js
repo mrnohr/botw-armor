@@ -179,6 +179,18 @@ function legsColorBack() {
     setLegsPicture(values.set, values.color);
 }
 
+// get selected set and color
+function getSelected(setElement, colorElement) {
+    var setDropDown = document.getElementById(setElement);
+    var colorDropDown = document.getElementById(colorElement);
+
+    var set = setDropDown.options[setDropDown.selectedIndex].value;
+    var color = colorDropDown.options[colorDropDown.selectedIndex].value;
+
+    return {set: set, color: color};
+}
+
+// Update name for mobile view
 function updateName() {
 	var headSet = document.getElementById("headSet");
 	var headColor = document.getElementById("headColor")
@@ -200,12 +212,3 @@ function updateName() {
 	document.getElementById("comboNameLegs").innerHTML = legsColorName + " " + legsSetName;
 }
 
-function getSelected(setElement, colorElement) {
-    var setDropDown = document.getElementById(setElement);
-    var colorDropDown = document.getElementById(colorElement);
-
-    var set = setDropDown.options[setDropDown.selectedIndex].value;
-    var color = colorDropDown.options[colorDropDown.selectedIndex].value;
-
-    return {set: set, color: color};
-}

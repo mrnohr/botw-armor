@@ -33,13 +33,13 @@ var armorList = [
     {id: "moblin", name: "Moblin Mask", bodyPart: "head", shareKey: "u"},
     {id: "lizalfos", name: "Lizalfos Mask", bodyPart: "head", shareKey: "v"},
     {id: "lynel", name: "Lynel Mask", bodyPart: "head", shareKey: "w"},
-    {id: "wild", name: "Wild", bodyPart: "all", shareKey: "e"},
     {id: "dark", name: "Dark", bodyPart: "all", shareKey: "x"},
     {id: "time", name: "Time", bodyPart: "all", shareKey: "A"},
     {id: "wind", name: "Wind", bodyPart: "all", shareKey: "B"},
     {id: "twilight", name: "Twilight", bodyPart: "all", shareKey: "C"},
     {id: "sky", name: "Sky", bodyPart: "all", shareKey: "D"},
     {id: "hero", name: "Hero", bodyPart: "all", shareKey: "E"},
+    {id: "wild", name: "Wild", bodyPart: "all", shareKey: "e"},
     {id: "switch-shirt", name: "Nintendo Switch Shirt", bodyPart: "body", shareKey: "y"},
     {id: "unequipped", name: "Unequipped", bodyPart: "all", shareKey: "g"}
 ]
