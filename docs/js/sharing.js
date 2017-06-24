@@ -45,34 +45,10 @@ function getDropdownKey(elementName) {
 	return document.getElementById(elementName).value
 }
 
-// take 2
-function getKeyByValue(object, value) {
-  return Object.keys(object).find(key => object[key] === value);
-}
-
-var sharingColors = {
-	1: "blue",
-	2: "red",
-	3: "yellow",
-	4: "white",
-	5: "black",
-	6: "purple",
-	7: "green",
-	8: "light-blue",
-	9: "navy",
-	a: "orange",
-	b: "peach",
-	c: "crimson",
-	d: "light-yellow",
-	e: "brown",
-	f: "gray",
-	g: "undyed"
-}
-
-function getLink2() {
-	var hck = getKeyByValue(sharingColors, getDropdownKey("headColor"));
-	var bck = getKeyByValue(sharingColors, getDropdownKey("bodyColor"));
-	var lck = getKeyByValue(sharingColors, getDropdownKey("legsColor"));
+function getLink() {
+	var hck = getColorShareKey(getDropdownKey("headColor"));
+	var bck = getColorShareKey(getDropdownKey("bodyColor"));
+	var lck = getColorShareKey(getDropdownKey("legsColor"));
 
 	var hsk = getArmorShareKey(getDropdownKey("headSet"));
 	var bsk = getArmorShareKey(getDropdownKey("bodySet"));
@@ -80,7 +56,7 @@ function getLink2() {
 
 	var sharingKey = "http://botw.fashion?id=" + hsk + hck + bsk + bck + lsk + lck;
 
-	console.log(sharingKey);
+	//console.log(sharingKey);
 	return sharingKey;
 }
 
@@ -88,16 +64,16 @@ function setColorsFromLink(id) {
 	var parts = id.split("");
 	if(parts.length >= 6) {
 		setDropdownByKey("headSet", getArmorIdFromShareKey(parts[0]));
-		setDropdownByKey("headColor", sharingColors[parts[1]]);
+		setDropdownByKey("headColor", getColorIdFromShareKey[parts[1]]);
 		setDropdownByKey("bodySet", getArmorIdFromShareKey(parts[2]));
-		setDropdownByKey("bodyColor", sharingColors[parts[3]]);
+		setDropdownByKey("bodyColor", getColorIdFromShareKey[parts[3]]);
 		setDropdownByKey("legsSet", getArmorIdFromShareKey(parts[4]));
-		setDropdownByKey("legsColor", sharingColors[parts[5]]);
+		setDropdownByKey("legsColor", getColorIdFromShareKey[parts[5]]);
 	}
 }
 
 function fillShareLink() {
-	var shareLink = getLink2();
+	var shareLink = getLink();
 
 	var linkInput = document.getElementById("shareLink");
 	linkInput.value = shareLink;

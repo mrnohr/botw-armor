@@ -1,11 +1,6 @@
 function init() {
 
-    addOptionToSelect("allColor", "default", "-- Choose a set for all --")
-
-	fillColorDropdown("headColor");
-	fillColorDropdown("bodyColor");
-	fillColorDropdown("legsColor");
-	fillColorDropdown("allColor");
+    fillColors();
 
     fillAllArmor();
 	fillHeadArmor();
@@ -15,29 +10,17 @@ function init() {
 	checkForShare();
 }
 
-function fillColorDropdown(elementName) {
-	var colors = {
-		"blue":"Blue",
-		"red":"Red",
-		"yellow":"Yellow",
-		"white":"White",
-		"black":"Black",
-		"purple":"Purple",
-		"green":"Green",
-		"light-blue":"Light Blue",
-		"navy":"Navy",
-		"orange":"Orange",
-		"peach":"Peach",
-		"crimson":"Crimson",
-		"light-yellow":"Light Yellow",
-		"brown":"Brown",
-		"gray":"Gray",
-		"undyed":"Original"
-	};
+function fillColors() {
+    addOptionToSelect("allColor", "default", "-- Choose a set for all --");
 
-	for(var key in colors) {
-        addOptionToSelect(elementName, key, colors[key]);
-	}
+    var colors = getColors();
+
+    for (var i = 0; i < colors.length; i++) {
+        addOptionToSelect("headColor", colors[i].id, colors[i].name);
+        addOptionToSelect("bodyColor", colors[i].id, colors[i].name);
+        addOptionToSelect("legsColor", colors[i].id, colors[i].name);
+        addOptionToSelect("allColor", colors[i].id, colors[i].name);
+    }
 }
 
 function fillHeadArmor() {
@@ -65,7 +48,7 @@ function fillLegsArmor() {
 }
 
 function fillAllArmor() {
-    addOptionToSelect("allSet", "default", "-- Choose a set for all --")
+    addOptionToSelect("allSet", "default", "-- Choose a set for all --");
 
     var armors = getAllArmor();
 
