@@ -7,6 +7,7 @@ function init() {
     fillBodyArmor();
     fillLegsArmor();
 
+    randomizeOutfit();
 	checkForShare();
 }
 
@@ -64,4 +65,15 @@ function addOptionToSelect(elementName, key, displayText) {
     item.value = key;
     item.innerHTML = displayText;
     dropDown.appendChild(item);
+}
+
+function randomizeOutfit() {
+    var dropDowns = ["headColor", "headSet", "bodyColor", "bodySet", "legsColor", "legsSet"];
+    for (var i = 0; i < dropDowns.length; i++) {
+        var dropDown = document.getElementById(dropDowns[i]);
+        var randomOption = Math.floor(Math.random() * dropDown.options.length);
+        var value = dropDown.options[randomOption].value;
+        dropDown.value = value;
+        dropDown.onchange();
+    }
 }

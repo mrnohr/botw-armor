@@ -1,8 +1,9 @@
 function checkForShare() {
 	var id = getParameterByName("id");
 	if(id != null) {
-		setColorsFromLink(id);
+		setSharingColor(id);
 	} else if (getParameterByName("hc") != null) {
+		//TODO deprecated
 		setDropdownByKey("headColor", getParameterByName("hc"));
 		setDropdownByKey("bodyColor", getParameterByName("bc"));
 		setDropdownByKey("legsColor", getParameterByName("lc"));
@@ -12,13 +13,7 @@ function checkForShare() {
 		setDropdownByKey("legsSet", getParameterByName("ls"));
 	} else {
 		//default
-        setDropdownByKey("headSet", "hylian");
-        setDropdownByKey("bodySet", "hylian");
-        setDropdownByKey("legsSet", "hylian");
-
-        setDropdownByKey("headColor", "blue");
-        setDropdownByKey("bodyColor", "blue");
-        setDropdownByKey("legsColor", "blue");
+        //setSharingColor("121111"); //hylian
     }
 }
 
@@ -60,7 +55,7 @@ function getLink() {
 	return sharingKey;
 }
 
-function setColorsFromLink(id) {
+function setSharingColor(id) {
 	var parts = id.split("");
 	if(parts.length >= 6) {
 		setDropdownByKey("headSet", getArmorIdFromShareKey(parts[0]));
