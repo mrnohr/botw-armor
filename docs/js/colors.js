@@ -33,7 +33,7 @@ function getColorShareKey(id) {
 }
 
 function getColorIdFromShareKey(shareKey) {
-    var color = armorList.find(function(color){
+    var color = colorList.find(function(color){
         return color.shareKey === shareKey;
     });
 

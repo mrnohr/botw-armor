@@ -64,11 +64,11 @@ function setColorsFromLink(id) {
 	var parts = id.split("");
 	if(parts.length >= 6) {
 		setDropdownByKey("headSet", getArmorIdFromShareKey(parts[0]));
-		setDropdownByKey("headColor", getColorIdFromShareKey[parts[1]]);
+		setDropdownByKey("headColor", getColorIdFromShareKey(parts[1]));
 		setDropdownByKey("bodySet", getArmorIdFromShareKey(parts[2]));
-		setDropdownByKey("bodyColor", getColorIdFromShareKey[parts[3]]);
+		setDropdownByKey("bodyColor", getColorIdFromShareKey(parts[3]));
 		setDropdownByKey("legsSet", getArmorIdFromShareKey(parts[4]));
-		setDropdownByKey("legsColor", getColorIdFromShareKey[parts[5]]);
+		setDropdownByKey("legsColor", getColorIdFromShareKey(parts[5]));
 	}
 }
 
