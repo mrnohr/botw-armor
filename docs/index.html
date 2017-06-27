@@ -57,6 +57,7 @@
 	<script src="js/init.js"></script>
 	<script src="js/colorChange.js"></script>
 	<script src="js/sharing.js"></script>
+	<script src="js/analyticsHelper.js"></script>
 	</head>
 
 	<body>
@@ -115,7 +116,7 @@
 		<div class="row">
 			<div class="col-xs-2 col-sm-1"> </div>
 			<div class="col-xs-8 col-sm-4">
-				<button class="btn btn-info btn-block" onclick="randomizeOutfit();">
+				<button class="btn btn-info btn-block" onclick="trackRandom(); randomizeOutfit();">
 					Randomize
 				</button>
 			</div>
@@ -254,7 +255,7 @@
 		<div class="row">
 			<div class="col-xs-2 col-sm-1"> </div>
 			<div class="col-xs-8 col-sm-4">
-				<button class="btn btn-primary btn-block" onclick="fillShareLink();" data-toggle="modal" data-target="#myModal">
+				<button class="btn btn-primary btn-block" onclick="trackShare(); fillShareLink();" data-toggle="modal" data-target="#myModal">
 					Share
 				</button>
 			</div>
