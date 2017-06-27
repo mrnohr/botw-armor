@@ -277,11 +277,11 @@
 							<input type="text" id="shareLink" class="form-control" placeholder="Text input">
 						</p>
 						<p>
-							<a id="shareTweet" class="btn btn-info" href="https://twitter.com/intent/tweet?text=botw.fashion" target="_blank">
+							<a id="shareTweet" class="btn btn-info" href="https://twitter.com/intent/tweet?text=botw.fashion" target="_blank" onclick="trackTwitter();">
 								<i class="fa fa-twitter"></i> Tweet
 							</a>
 							<div class="fb-share-button" data-href="http://botw.fashion" data-layout="button" data-size="small" data-mobile-iframe="true">
-								<a id="shareFacebook" class="btn btn-primary fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fbotw.fashion">
+								<a id="shareFacebook" class="btn btn-primary fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fbotw.fashion" onclick="trackFacebook();">
 									<i class="fa fa-facebook"></i> Share on Facebook</a>
 							</div>
 						</p>
@@ -410,7 +410,7 @@
 		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
 		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-		})(window,document,'script','https://www.google-analytics.com/analytics','ga');
+		})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
 		ga('create', 'UA-610084-17', 'auto');
 		ga('send', 'pageview');
