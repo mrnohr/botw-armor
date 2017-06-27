@@ -1,7 +1,17 @@
 function trackShare() {
-    ga('send', 'event', 'button', 'click', 'share', 1);
+    ga('send', {
+        hitType: 'event',
+        eventCategory: 'button',
+        eventAction: 'click',
+        eventLabel: 'Share'
+    });
 }
 
 function trackRandom() {
-    ga('send', 'event', 'button', 'click', 'random', 1);
+    ga('send', {
+        hitType: 'event',
+        eventCategory: 'button',
+        eventAction: 'click',
+        eventLabel: 'Random'
+    });
 }
