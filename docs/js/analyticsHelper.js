@@ -16,20 +16,38 @@ function trackRandom() {
     });
 }
 
-function trackTwitter() {
+function trackShareTwitter() {
     ga('send', {
         hitType: 'event',
         eventCategory: 'button',
         eventAction: 'click',
-        eventLabel: 'Twitter'
+        eventLabel: 'ShareTwitter'
     });
 }
 
-function trackFacebook() {
+function trackShareFacebook() {
     ga('send', {
         hitType: 'event',
         eventCategory: 'button',
         eventAction: 'click',
-        eventLabel: 'Facebook'
+        eventLabel: 'ShareFacebook'
+    });
+}
+
+function trackDonate() {
+    ga('send', {
+        hitType: 'event',
+        eventCategory: 'button',
+        eventAction: 'click',
+        eventLabel: 'Donate'
+    });
+}
+
+function trackMyTwitter() {
+    ga('send', {
+        hitType: 'event',
+        eventCategory: 'button',
+        eventAction: 'click',
+        eventLabel: 'MyTwitter'
     });
 }

@@ -79,13 +79,13 @@
 				</span>
 			</div>
 			<div id="navbar" class="collapse navbar-collapse navbar-right">
-				<a href="https://www.twitter.com/matthewnohr" class="btn btn-primary navbar-btn">
+				<a href="https://www.twitter.com/matthewnohr" class="btn btn-primary navbar-btn" onclick="trackMyTwitter();">
 					<i class="fa fa-twitter"></i>
 				</a>
 				<a href="https://github.com/mrnohr/botw-armor" class="btn btn-primary navbar-btn">
 					<i class="fa fa-github"></i> Fork Me
 				</a>
-				<a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=CNFGEMAHKW96A" class="btn btn-success navbar-btn">
+				<a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=CNFGEMAHKW96A" class="btn btn-success navbar-btn" onclick="trackDonate();">
 					<i class="fa fa-beer"></i> Donate
 				</a>
 			</div><!--/.nav-collapse -->
@@ -277,11 +277,11 @@
 							<input type="text" id="shareLink" class="form-control" placeholder="Text input">
 						</p>
 						<p>
-							<a id="shareTweet" class="btn btn-info" href="https://twitter.com/intent/tweet?text=botw.fashion" target="_blank" onclick="trackTwitter();">
+							<a id="shareTweet" class="btn btn-info" href="https://twitter.com/intent/tweet?text=botw.fashion" target="_blank" onclick="trackShareTwitter();">
 								<i class="fa fa-twitter"></i> Tweet
 							</a>
 							<div class="fb-share-button" data-href="http://botw.fashion" data-layout="button" data-size="small" data-mobile-iframe="true">
-								<a id="shareFacebook" class="btn btn-primary fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fbotw.fashion" onclick="trackFacebook();">
+								<a id="shareFacebook" class="btn btn-primary fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fbotw.fashion" onclick="trackShareFacebook();">
 									<i class="fa fa-facebook"></i> Share on Facebook</a>
 							</div>
 						</p>
@@ -389,7 +389,9 @@
 	<!-- Footer -->
 	<nav class="navbar navbar-default navbar-bottom">
 		<div class="container">
-			<p class="navbar-text">&copy; 2017 <a href="http://www.twitter.com/matthewnohr" class="navbar-link">Matthew Nohr</a></p>
+			<p class="navbar-text">&copy; 2017
+				<a href="http://www.twitter.com/matthewnohr" class="navbar-link" onclick="trackMyTwitter()">Matthew Nohr</a>
+			</p>
 		</div>
 	</nav>
 
