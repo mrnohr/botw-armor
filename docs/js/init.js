@@ -8,7 +8,6 @@ function init() {
     fillLegsArmor();
 
     randomizeOutfit();
-	checkForShare();
 }
 
 function fillColors() {
