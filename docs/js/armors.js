@@ -1,4 +1,4 @@
-//last share = F
+//last share = K
 var armorList = [
     {id: "well-worn", name: "Well Worn", bodyPart: "body", shareKey: "f"},
     {id: "well-worn", name: "Well Worn", bodyPart: "legs", shareKey: "f"},
@@ -41,6 +41,11 @@ var armorList = [
     {id: "hero", name: "Hero", bodyPart: "all", shareKey: "E"},
     {id: "wild", name: "Wild", bodyPart: "all", shareKey: "e"},
     {id: "switch-shirt", name: "Nintendo Switch Shirt", bodyPart: "body", shareKey: "y"},
+    {id: "korok", name: "Korok Mask", bodyPart: "head", shareKey: "G"},
+    {id: "majora", name: "Majora's Mask", bodyPart: "head", shareKey: "H"},
+    {id: "tingle", name: "Tingle", bodyPart: "all", shareKey: "I"},
+    {id: "midna", name: "Midna's Helmet", bodyPart: "head", shareKey: "J"},
+    {id: "phantom", name: "Phantom", bodyPart: "all", shareKey: "K"},
     {id: "unequipped", name: "Unequipped", bodyPart: "all", shareKey: "g"}
 ]
 

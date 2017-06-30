@@ -1,5 +1,5 @@
 String bodyPart = "legs"
-String set = "wind"
+String set = "phantom"
 
 File inputFile = new File("docs/images/${set}/${bodyPart}.png")
 

@@ -1,6 +1,6 @@
 import scripts.*
 
-String setName = "amiibo"
+String setName = "new"
 
 File sourceDir = new File("raw/${setName}")
 assert sourceDir.exists()
