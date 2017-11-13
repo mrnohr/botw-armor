@@ -1,6 +1,6 @@
 import scripts.*
 
-String setName = "salvager"
+String setName = "vah-ruta"
 
 File sourceDir = new File("raw/${setName}")
 assert sourceDir.exists()
@@ -16,5 +16,5 @@ outputDir.mkdirs()
 
 sourceDir.eachFile { inputFile ->
 	CropImage cropper = new CropImage(inputFile, outputDir)
-	cropper.cropUndyedImage()
+	cropper.cropImage()
 }

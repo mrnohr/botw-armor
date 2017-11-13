@@ -1,4 +1,4 @@
-String bodyPart = "body"
+String bodyPart = "head"
 String set = "salvager"
 
 File inputFile = new File("docs/images/${set}/${bodyPart}.png")

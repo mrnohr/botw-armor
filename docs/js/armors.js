@@ -1,4 +1,4 @@
-//last share = L
+//last share = P
 var armorList = [
     {id: "well-worn", name: "Well Worn", bodyPart: "body", shareKey: "f"},
     {id: "well-worn", name: "Well Worn", bodyPart: "legs", shareKey: "f"},
@@ -46,6 +46,10 @@ var armorList = [
     {id: "tingle", name: "Tingle", bodyPart: "all", shareKey: "I"},
     {id: "midna", name: "Midna's Helmet", bodyPart: "head", shareKey: "J"},
     {id: "phantom", name: "Phantom", bodyPart: "all", shareKey: "K"},
+    {id: "vah-ruta", name: "Vah Ruta", bodyPart: "head", shareKey: "M"},
+    {id: "vah-medoh", name: "Vah Medoh", bodyPart: "head", shareKey: "N"},
+    {id: "vah-rudania", name: "Vah Rudania", bodyPart: "head", shareKey: "O"},
+    {id: "vah-naboris", name: "Vah Naboris", bodyPart: "head", shareKey: "P"},
     {id: "salvager", name: "Salvager (Xenoblade)", bodyPart: "all", shareKey: "L"},
     {id: "unequipped", name: "Unequipped", bodyPart: "all", shareKey: "g"}
 ]
