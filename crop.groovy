@@ -1,6 +1,11 @@
 import scripts.*
 
-String setName = "vah-ruta"
+//island-lobster
+//ravio
+//zant
+//royal-guard
+//phantom-ganon
+String setName = "phantom-ganon"
 
 File sourceDir = new File("raw/${setName}")
 assert sourceDir.exists()
@@ -16,5 +21,6 @@ outputDir.mkdirs()
 
 sourceDir.eachFile { inputFile ->
 	CropImage cropper = new CropImage(inputFile, outputDir)
-	cropper.cropImage()
+	//cropper.cropImage()
+	cropper.cropUndyedImage()
 }

@@ -1,4 +1,4 @@
-//last share = P
+//last share = U
 var armorList = [
     {id: "well-worn", name: "Well Worn", bodyPart: "body", shareKey: "f"},
     {id: "well-worn", name: "Well Worn", bodyPart: "legs", shareKey: "f"},
@@ -46,6 +46,11 @@ var armorList = [
     {id: "tingle", name: "Tingle", bodyPart: "all", shareKey: "I"},
     {id: "midna", name: "Midna's Helmet", bodyPart: "head", shareKey: "J"},
     {id: "phantom", name: "Phantom", bodyPart: "all", shareKey: "K"},
+    {id: "island-lobster", name: "Island Lobster", bodyPart: "body", shareKey: "Q"},
+    {id: "ravio", name: "Ravio", bodyPart: "head", shareKey: "R"},
+    {id: "zant", name: "Zant", bodyPart: "head", shareKey: "S"},
+    {id: "royal-guard", name: "Royal Guard", bodyPart: "all", shareKey: "T"},
+    {id: "phantom-ganon", name: "Phantom Ganon", bodyPart: "all", shareKey: "U"},
     {id: "vah-ruta", name: "Vah Ruta", bodyPart: "head", shareKey: "M"},
     {id: "vah-medoh", name: "Vah Medoh", bodyPart: "head", shareKey: "N"},
     {id: "vah-rudania", name: "Vah Rudania", bodyPart: "head", shareKey: "O"},

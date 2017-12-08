@@ -28,7 +28,7 @@ class CropImage {
 		println "    head..."
 		File outputFile = new File("${name}-head.png", outputDir)
 		doCropping(inputFile, outputFile, headCropParams)
-/*
+
 		println "    body..."
 		outputFile = new File("${name}-body.png", outputDir)
 		doCropping(inputFile, outputFile, bodyCropParams)
@@ -36,7 +36,6 @@ class CropImage {
 		println "    legs..."
 		outputFile = new File("${name}-legs.png", outputDir)
 		doCropping(inputFile, outputFile, legsCropParams)
-		*/
 	}
 
 	public void cropUndyedImage() {
