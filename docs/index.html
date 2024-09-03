@@ -5,7 +5,7 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-	<meta name="description" content="BOTW Fashion - View armor colors">
+	<meta name="description" content="BOTW and TOTK Fashion - View armor colors">
 	<meta name="author" content="Matthew Nohr">
 	<!-- Favicon -->
 	<link rel="apple-touch-icon" sizes="57x57" href="img/apple-icon-57x57.png">
@@ -28,12 +28,12 @@
 	<!-- Facebook Meta Tags -->
 	<meta property="og:url"  content="http://botw.fashion" />
 	<meta property="og:type" content="game" />
-	<meta property="og:title" content="BOTW Fashion" />
+	<meta property="og:title" content="BOTW/TOTK Fashion" />
 	<meta property="og:description" content="See what your armor will look like without visiting the dye shop." />
 	<meta property="og:image" content="http://botw.fashion/img/social-logo.png" />
 	<meta property="fb:app_id" content="1151957371575913" />
 
-	<title>BOTW Fashion</title>
+	<title>BOTW/TOTK Fashion</title>
 
 	<!-- Bootstrap core CSS -->
 	<link href="css/bootstrap.min.css" rel="stylesheet">
@@ -58,6 +58,7 @@
 	<script src="js/colorChange.js"></script>
 	<script src="js/sharing.js"></script>
 	<script src="js/analyticsHelper.js"></script>
+	<script> window.addEventListener('load', randomizeAll);</script>
 	</head>
 
 	<body>
@@ -75,7 +76,7 @@
 					<img src="img/logo-navbar.jpg" />
 				</span>
 				<span class="navbar-brand">
-					BOTW Fashion
+					BOTW/TOTK Fashion
 				</span>
 			</div>
 			<div id="navbar" class="collapse navbar-collapse navbar-right">
@@ -95,7 +96,7 @@
 	<div class="container">
 		<!-- Intro text -->
 		<div class="page-header">
-			<h1>Breath of the Wild Fashion</h1>
+			<h1>Breath of the Wild/Tears of the Kingdom Fashion</h1>
 		</div>
 		<p class="lead">
 			See what your armor will look like without visiting the
@@ -116,7 +117,7 @@
 		<div class="row">
 			<div class="col-xs-2 col-sm-1"> </div>
 			<div class="col-xs-8 col-sm-4">
-				<button class="btn btn-info btn-block" onclick="trackRandom(); randomizeOutfit();">
+				<button class="btn btn-info btn-block" onclick="trackRandom(); randomizeAll();">
 					Randomize
 				</button>
 			</div>
@@ -139,7 +140,7 @@
 				</div>
 			</div>
 			<div class="col-xs-8 col-sm-4">
-				<img id="headImg" src="images/hylian/blue-head.png" class="img-responsive"/>
+				<img id="headImg" class="img-responsive"/>
 			</div>
 			<div class="col-xs-2 col-sm-1">
 				<div class="row">
@@ -301,9 +302,19 @@
 				<h2 class="panel-title">Latest Updates</h2>
 			</div>
 			<div class="panel-body">
-				<p><strong>DLC2 Armor is here!</strong> This includes 2 new full sets, 2 new helmets, and one new weird shirt.</p>
+				<p><strong>All Tears of the Kingdom armor has been added!</strong> You can now browse every single armor piece to your 
+				heart's content in both Breath of the Wild and Tears of the Kingdom!</p>
         		<p>Stay fashionable!</p>
         		<h4>Changes</h4>
+				<a data-toggle="collapse" href="#collapse100" aria-expanded="false" aria-controls="collapse100">v10.0</a><br/>
+				<div class="collapse" id="collapse100">
+					<ul>
+						<li>TOTK armor added</li>
+						<li>Well Worn and Archaic are now considered full sets with the default head</li>
+						<li>TOTK information resources added</li>
+						<li>Website updated to reflect new changes</li>
+					</ul>
+				</div>
 				<a data-toggle="collapse" href="#collapse90" aria-expanded="false" aria-controls="collapse90">v9.0</a><br/>
 				<div class="collapse" id="collapse90">
 					<ul>
@@ -376,7 +387,7 @@
 			</div>
 			<div class="panel-body">
 				<h3>What is this?</h3>
-				<p>In Legend of Zelda: Breath of the Wild, you can find/earn armor throughout the game. There is also
+				<p>In The Legend of Zelda: Breath of the Wild and Tears of the Kingdom, you can find/earn armor throughout the game. There is also
 					a <a href="https://www.zeldadungeon.net/wiki/Kochi_Dye_Shop">shop</a> in the game where you can go
 					to change the color of your armor.</p>
 				<p>However, this process is fairly painful. You have to dye your head, body, and leg armor all at
@@ -385,14 +396,26 @@
 				<p>This tool lets you get an idea of what color combinations will look like, without having to go to
 					the dye shop. I wanted this so I could pick something that looked good, and then went to the shop
 					in the game, knowing what I was going to get.</p>
+				<p> A huge shout-out to <a href="https://github.com/fashion-tool">fashion-tool on GitHub</a> for adding all the TotK armor!</p>
+				<p>	*Please note:
+					<li>The Ancient Hero's Aspect has a different ratio to all other photos due to it being a full
+					armor piece. It can be put with other items of clothing on this website, however this is just for fun, and is 
+					not possible in game.</li>
+					<li>The Wild armor can also be dyed in BOTW but not TOTK.</li>
+					<li>Armor not present in TOTK: well worn set, desert voe set, ancient set, salvager set, unequipped (BOTW) set, 
+					warm doublet, and Nintendo Switch shirt</li>
+					<li>In TOTK, a few armour pieces have been renamed. The Phantom Ganon set has been renamed to Evil Spirit set, and
+					the Champion's Tunic has been renamed to the Tunic of Memories.</li></p>
 
 				<h3>Additional Information</h3>
 				<ul>
 					<li><a href="https://www.zeldadungeon.net/wiki/index.php?title=Kochi_Dye_Shop">List of dye ingredients</a></li>
-					<li><a href="https://www.zeldadungeon.net/wiki/Breath_of_the_Wild_Armor">List of armor</a></li>
+					<li><a href="https://www.zeldadungeon.net/wiki/Breath_of_the_Wild_Armor">List of armor (Breath of the Wild)</a></li>
+					<li><a href="https://www.zeldadungeon.net/wiki/Tears_of_the_Kingdom_Armor">List of armor (Tears of the Kingdom)</a></li>
 				</ul>
 
 				<h3>About This Site</h3>
+
 				<p>To create the images I used the screenshot feature on the Switch and then wrote a script to crop
 					all the pictures. All the images (uncropped and cropped) are available on
                     <a href="https://github.com/mrnohr/botw-armor">GitHub</a>.</p>

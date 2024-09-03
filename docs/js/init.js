@@ -11,7 +11,7 @@ function init() {
 }
 
 function fillColors() {
-    addOptionToSelect("allColor", "default", "-- Choose a set for all --");
+    addOptionToSelect("allColor", "default", "-- Choose a color for all --");
 
     var colors = getColors();
 
@@ -64,15 +64,41 @@ function addOptionToSelect(elementName, key, displayText) {
     item.value = key;
     item.innerHTML = displayText;
     dropDown.appendChild(item);
+
 }
 
-function randomizeOutfit() {
-    var dropDowns = ["headColor", "headSet", "bodyColor", "bodySet", "legsColor", "legsSet"];
-    for (var i = 0; i < dropDowns.length; i++) {
-        var dropDown = document.getElementById(dropDowns[i]);
-        var randomOption = Math.floor(Math.random() * dropDown.options.length);
-        var value = dropDown.options[randomOption].value;
-        dropDown.value = value;
-        dropDown.onchange();
-    }
+function getRandomOption(elementId) {
+    var dropdown = document.getElementById(elementId);
+    var randomIndex = Math.floor(Math.random() * dropdown.options.length);
+    return dropdown.options[randomIndex].value;
+}
+
+function getRandomColor() {
+    return colorList[Math.floor(Math.random() * colorList.length)].id;
+}
+
+function randomizeAll() {
+    var randomHeadSet = getRandomOption("headSet");
+    var randomHeadColor = getRandomColor();
+    setHeadPicture(randomHeadSet, randomHeadColor);
+
+    var randomBodySet = getRandomOption("bodySet");
+    var randomBodyColor = getRandomColor();
+    setBodyPicture(randomBodySet, randomBodyColor);
+
+    var randomLegsSet = getRandomOption("legsSet");
+    var randomLegsColor = getRandomColor();
+    setLegsPicture(randomLegsSet, randomLegsColor);
+
+    // Randomize the "all" dropdowns if needed
+    var randomAllSet = getRandomOption("allSet");
+    setHeadPicture(randomAllSet, randomHeadColor);
+    setBodyPicture(randomAllSet, randomBodyColor);
+    setLegsPicture(randomAllSet, randomLegsColor);
+
+    // Randomize the color dropdown
+    var randomColor = getRandomColor();
+    setHeadPicture(randomHeadSet, randomHeadColor);
+    setBodyPicture(randomBodySet, randomBodyColor);
+    setLegsPicture(randomLegsSet, randomLegsColor);
 }
